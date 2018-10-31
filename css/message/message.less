@@ -1,0 +1,116 @@
+
+
+
+.che_main{
+    border-top: 1px solid #f5f5f5;
+    .addcar_box{
+        padding-left: .75rem;
+        background-color: #fff;
+        font-size: .75rem;
+        .addcar_main{
+            height: 2.6rem;
+            justify-content: start;
+            align-items: center;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #f5f5f5;
+            
+            >div{
+                align-items: center;
+                letter-spacing: 0px;
+                padding-left: 1rem;
+                .addcar_plate{
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-right: .25rem;
+                    .mui-icon-arrowup{
+                        display: none;
+                    }
+                }
+                >input{
+                    font-size: .75rem;
+                    padding: .5rem 0px;
+                    border: none;
+                    margin: 0;
+                    width: 7rem;
+                }
+            }
+            .addcar_pai{
+                width: 20%;
+            }
+            .selects{
+                .dianji{
+                    width: 10rem;
+                }
+                .mui-icon-arrowright{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .addcar_bottom{
+            height: 3.1rem;
+            padding: .5rem 1rem .5rem .5rem;
+            >div{
+                height: 2.1rem;
+                line-height: 2.1rem;
+                border-radius: .25rem;
+                color: #fff;
+                font-size: .8rem;
+                text-align: center;
+                background-color: #ea5504;
+                
+                background: -webkit-linear-gradient(left, #ff8417, #ea5504);
+                background: linear-gradient(left, #ff8417, #ea5504);
+                }
+        }
+
+    }
+}
+// 车牌弹出层配置
+.mui-popover {
+    position: fixed;
+    width: 101%;
+    height: 34%;
+    border-radius: 0;
+    left: 50%;
+    top: 77%;
+    margin: 0 auto;
+    /* padding-bottom: 100px; */
+    z-index: 999;
+    overflow: hidden;
+    box-shadow: 0 -.25rem .35rem 0 rgba(0,0,0,.1);
+    background-color: #fff;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.order_carry {
+    /* margin-left:20px; */
+    width: 12.5%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: .4rem;
+}
+
+.order_carry span {
+    display: inline-block;
+    font-size: .7rem;
+    width: 1.8rem;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    background-color: #fff;
+    border-radius: .25rem;
+    box-shadow:0 .075rem 0px .025rem #ccc;
+}
+.order_zindex{
+    z-index: 1200;
+    height:13.3rem;
+    top:82%;
+}
+.mui-popover .mui-scroll-wrapper{
+    margin: 0;
+}
+#pop_bottom .mui-scroll{
+    height: 13.3rem;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index/shangpin/entity.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>选择实体商品</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="loading hiden">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+                        <!-- <div class="commodity_header">
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>名称:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品名称">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>品牌:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品价格">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>型号:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品价格">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>规格:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品价格">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>单位:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品价格">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>价格:</span>
+                                    <input type="text" class="comm_name" placeholder="输入商品价格">
+                                </div>
+                                <span class="iconfont icon-xuanze "></span>
+                            </div>
+                            <div class="commodity_one che_display">
+                                <div class="">
+                                    <span>数量:</span>
+                                    <input type="number" class="comm_name entity_num" placeholder="输入商品数量">
+                                </div>
+                                <span class="type_num">x 0</span>
+                            </div>
+                        </div>
+                        <div class="commodity_aside">
+                            <div class="singlePerson">
+                                <div class="commodity_one commodity_two che_display">
+                                    <span>开单人</span>
+                                    <span class="picking_btn">添加</span>
+                                </div>
+                            </div>
+                            <div class="picking">
+                                <div class="commodity_one commodity_two che_display">
+                                    <span>领料人</span>
+                                    <span class="picking_btn">添加</span>
+                                </div>
+                            </div>
+                            <div class="constructor">
+                                <div class="commodity_one commodity_two che_display">
+                                    <span>施工人</span>
+                                    <span class="picking_btn">添加</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="commodity_footer">
+                            <div class="addCommod">
+                                添加
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="che_footer">
+            <div class="commodity_footer">
+                <div class="addCommod">
+                    添加
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/js/jquery.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/index/addProduct/shiti.js"></script>
+<script type="text/html" id="tpl">
+    {{each data as v i }}
+    <div class="commodity_main" data-id="{{v.goods_id}}">
+        
+        <div class="commodity_header">
+            <div class="commodity_one che_display" data-average="{{v.average_price}}">
+                <div class="">
+                    <span>名称:</span>
+                    <input type="text" class="comm_name" placeholder="" value="{{v.goods_name}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze- allpitch"></span>
+            </div>
+            <div class="commodity_one che_display">
+                <div class="">
+                    <span>数量:</span>
+                    <input type="number" class="comm_name entity_num" placeholder="设置商品数量" >
+                </div>
+                <span class="type_num">库存 {{v.goods_number}}</span>
+            </div>
+            <div class="commodity_one che_display" data-pitch="1">
+                <div class="">
+                    <span>品牌:</span>
+                    <input type="text" class="comm_name" placeholder="" value="{{v.goods_brand}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze "></span>
+            </div>
+            <div class="commodity_one che_display" data-pitch="2">
+                <div class="">
+                    <span>型号:</span>
+                    <input type="text" class="comm_name" placeholder="" value="{{v.goods_model}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze "></span>
+            </div>
+            <div class="commodity_one che_display" data-pitch="3">
+                <div class="">
+                    <span>规格:</span>
+                    <input type="text" class="comm_name" placeholder="" value="{{v.specification}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze "></span>
+            </div>
+            <div class="commodity_one che_display" data-pitch="4">
+                <div class="">
+                    <span>单位:</span>
+                    <input type="text" class="comm_name" placeholder="" value="{{v.goods_unit}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze "></span>
+            </div>
+            <div class="commodity_one che_display" data-pitch="5">
+                <div class="">
+                    <span>价格:</span>
+                    <input type="text" class="comm_name entity_price" placeholder="输入商品价格" value="￥{{v.selling_price}}" readonly>
+                </div>
+                <span class="iconfont icon-xuanze "></span>
+            </div>
+        </div>
+        <div class="commodity_aside" style="display:none">
+            <div class="singlePerson oneNum_people">
+                <div class="commodity_one commodity_two che_display">
+                    <span>接单人</span>
+                </div>
+            </div>
+            <div class="picking">
+                <div class="commodity_one commodity_two che_display">
+                    <span>领料人</span>
+                    <span class="picking_btn">添加</span>
+                </div>
+            </div>
+            <div class="constructor">
+                <div class="commodity_one commodity_two che_display">
+                    <span>施工人</span>
+                    <span class="picking_btn">添加</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{/each}}
+</script>
+<!-- <script> 
+        function demo(){    
+            var test = document.getElementById('selects');
+            test.focus();     
+            var WshShell = new ActiveXObject("Wscript.Shell");     
+            try {         
+            WshShell.SendKeys("%{DOWN}");     
+            } catch(e){}              
+            WshShell.Quit; 
+        } 
+</script>  -->
+
+</html>

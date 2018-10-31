@@ -1,0 +1,55 @@
+.che_container .che_main {
+  background-color: #fff;
+}
+.che_container .che_main .che_img {
+  justify-content: center;
+}
+.che_container .che_main .che_img > img {
+  height: 4.75rem;
+  width: 4.75rem;
+}
+.che_container .che_main .che_input {
+  margin-top: 2.25rem;
+  flex-direction: column;
+  align-items: center;
+}
+.che_container .che_main .che_input > div {
+  width: 13.5rem;
+  position: relative;
+}
+.che_container .che_main .che_input > div input[type=password],
+.che_container .che_main .che_input > div input[type=text] {
+  line-height: 1.05rem;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  padding: .5rem 0 .5rem 1.25rem;
+  -webkit-user-select: text;
+  border: none;
+  border-bottom: 1px solid #cdd1d4;
+  border-radius: 0;
+  outline: 0;
+  background-color: #fff;
+  font-size: .7rem;
+}
+.che_container .che_main .che_input > div .che_tubiao {
+  position: absolute;
+  top: .45rem;
+  left: 0px;
+  font-size: .9rem;
+  color: #bec3c8;
+}
+.che_container .che_main .che_login {
+  margin-top: 2rem;
+  justify-content: center;
+}
+.che_container .che_main .che_login .loginBtn {
+  height: 50px;
+  border: none;
+  color: #fff;
+  width: 13.75rem;
+  border-radius: .25rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #ff8417, #ea5504);
+  background: linear-gradient(left, #ff8417, #ea5504);
+}

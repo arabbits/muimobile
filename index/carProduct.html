@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/billing.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>详情</h4>
+        </div>
+        <div class="loading hiden" style="display: none;">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+
+                    <div class="tosuit_main">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/carProduct.js"></script>
+<script type="text/html" id="tpl">
+    <div class="tosuit_top">
+        <div class="tosuit_content che_display">
+            <span class="tosuit_pai">车牌:</span>
+            <input type="text" class="tosuit_num" value="{{data.cartList.cart_licens}}" disabled>
+        </div>
+        <div class="tosuit_content che_display">
+            <span class="tosuit_pai">车主:</span>
+            <!-- <span class="tosuit_num">136465656265</span> -->
+            <input type="text" class="tosuit_num" value="{{data.connect_people}}" disabled>
+
+        </div>
+        <div class="tosuit_content che_display">
+            <span class="tosuit_pai">电话:</span>
+            <input type="text" class="tosuit_num" value="{{data.connect_phone}}" disabled>
+        </div>
+        <div class="tosuit_content che_display">
+            <span class="tosuit_pai">订单号:</span>
+            <input type="text" class="tosuit_num" value="{{data.ordersn}}" disabled>
+        </div>
+        <div class="tosuit_content che_display">
+            <span class="tosuit_pai">订单总价:</span>
+            <input type="text" class="tosuit_num" value="{{data.totalprice}}" disabled>
+        </div>
+    </div>
+    <div class="billing_boxs">
+        <div class="tosuit_top">
+            <div class="billing_main">
+                <div class="tosuit_content che_display billing_one" >
+                    <span class="tosuit_pai">商品名称</span>
+                    <!-- <span class="picking_btn" data-id="1">添加</span> -->
+                </div>
+                <div class="billing_two billing_fuwu">
+                        {{each data.goodsList as v i}}
+
+                        <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                            <div class="twoName che_display">
+                                <div class="twoName_names">
+                                    <span>名称:</span>
+                                    <span class="che_acolor">{{v.goods_name}}</span>
+                                </div>
+                            </div>
+                            <div class="twoName che_display">
+                                <div class="twoName_names">
+                                    <span>价格:</span>
+                                    <span class="che_acolor">￥<span class="billing_money">{{v.sellings_price}}</span></span>
+                                </div>
+                            </div>
+                            <div class="twoName che_display">
+                                <div class="twoName_names">
+                                    <span>数量:</span>
+                                    <span class="che_acolor"><span class="billing_money">{{v.goods_num}}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                </div>
+            </div>
+            {{if data.sellerList.length>0}}
+            <div class="billing_main">
+                <div class="tosuit_content che_display billing_one" data-id="2">
+                    <span class="tosuit_pai">订单处理</span>
+                </div>
+                <div class="billing_two billing_fuwu">
+                    <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                        {{each data.sellerList as v i}}
+                            {{if v.type==1}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">接单人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{else if  v.type==2}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">领料人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{else if  v.type==3}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">施工人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{/if}}
+
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    
+</script>
+
+</html>

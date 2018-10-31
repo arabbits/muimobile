@@ -1,0 +1,91 @@
+.che_container {
+  padding-top: 2.2rem;
+}
+.che_container .che_main .mui-scroll {
+  border-top: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .headPortrait {
+  padding: 1.1rem 2.3rem 1.3rem 2.3rem;
+  height: 5rem;
+  background-color: #fff;
+  border-bottom: .025rem solid #e7e7e7;
+  margin-top: .05rem;
+}
+.che_container .che_main .mui-scroll .headPortrait .portraitOne {
+  padding-right: 1rem;
+}
+.che_container .che_main .mui-scroll .headPortrait .portraitOne img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+.che_container .che_main .mui-scroll .headPortrait .portraitTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  width: 100%;
+}
+.che_container .che_main .mui-scroll .headPortrait .portraitTwo .portraitName {
+  height: 50%;
+  line-height: 150%;
+  width: 10.65rem;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.che_container .che_main .mui-scroll .headPortrait .portraitTwo .portraitStyle {
+  height: 50%;
+  line-height: 150%;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper {
+  padding: 0px 1.35rem 0px 1.1rem;
+  background-color: #fff;
+  margin-bottom: .05rem;
+  letter-spacing: 1px;
+  height: 60px;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui {
+  justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui div span {
+  font-size: .8rem;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_top .mui-icon {
+  color: #ea5504;
+  padding-right: .5rem;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_top .icon-huiyuanqia {
+  font-size: 1.1rem;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_top .icon-iconduihuakuang {
+  padding-right: .3rem;
+  font-size: 1.1rem;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_bot {
+  align-items: center;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_bot .myselfNum {
+  font-size: .75rem;
+  text-align: center;
+  margin-right: 5px;
+  padding: 0    5px;
+  background-color: #ea5504;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.che_container .che_main .mui-scroll .allSuper .cheSuper > .che_youhui > .youhui_bot .mui-icon {
+  font-size: 1rem;
+  color: #a0a0a0;
+}

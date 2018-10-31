@@ -1,0 +1,109 @@
+.che_container {
+  background-color: #f5f5f5;
+}
+.che_container .che_main .mui-scroll {
+  font-size: .7rem;
+  padding-bottom: .5rem;
+}
+.che_container .che_main .mui-scroll .reception_header {
+  height: 3.6rem;
+  background-color: #fff;
+  border-top: 1px solid #f5f5f5;
+  padding: 0 .75rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .6rem;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.che_container .che_main .mui-scroll .reception_nav {
+  padding-left: .7rem;
+  background-color: #fff;
+  letter-spacing: 1px;
+  margin-top: .5rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top {
+  height: 2.1rem;
+  padding-right: .7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex {
+  justify-content: space-between;
+  width: 6.8rem;
+  color: #a0a0a0;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .select_man {
+  padding-right: .1rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .iconfont {
+  font-size: .75rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .nav_iphone {
+  letter-spacing: 0px;
+}
+.che_container .che_main .mui-scroll .reception_nav :last-child {
+  border: none;
+}
+.che_container .che_main .mui-scroll .reception_coupon {
+  letter-spacing: 1px;
+}
+.che_container .che_main .mui-scroll .reception_coupon .list_coupon {
+  text-align: center;
+  background-color: #fff;
+  margin-top: .5rem;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  padding-right: .7rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .record_main .record_frist {
+  margin-bottom: .25rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .record_main .record_frist .recard_one {
+  height: 2rem;
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .5rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .record_main .record_frist .recard_one > div {
+  justify-content: space-between;
+}
+.che_container .che_main .mui-scroll .reception_coupon .record_main .record_frist .recard_one > div > span:first-child {
+  padding-right: .3rem;
+}
+.che_container .che_main .mui-scroll .reception_footer {
+  height: 3.1rem;
+  padding: .5rem 0;
+}
+.che_container .che_main .mui-scroll .reception_footer .reception_message {
+  height: 2.1rem;
+  line-height: 2.1rem;
+  border-radius: .25rem;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  background-color: #ea5504;
+  background: -webkit-linear-gradient(left, #ff8417, #ea5504);
+  background: linear-gradient(left, #ff8417, #ea5504);
+}
+.che_container .che_footer {
+  display: none;
+  background-color: #ea5504;
+  color: #fff;
+}

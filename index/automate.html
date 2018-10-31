@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/automate.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="./pickSingle.html">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>自动识别</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+
+                    <div class="automate_main">
+
+                        <div class="rateComment">
+                            <div class="ratePrint che_display">
+                                <div class="photoBox che_display">
+                                    <div class="photoFamily che_display">
+                                        <div class="familySon che_display">
+
+                                        </div>
+                                    </div>
+                                    <label>
+                                        <div class="icon_fonts">
+                                            <!-- <span class="iconfont icon-shouji1"></span> -->
+                                            <div class="huangse"></div>
+                                        </div>
+                                        <input type="file" class="gofor" id="file" accept="image/*">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="auto_pai che_display">
+                            <span>车牌号:</span>
+                            <input type="text" placeholder="请点击拍摄车牌号" class="chepai">
+                        </div>
+                        <div class="auto_father">
+
+                            <!-- <div class="auto_pai che_display auto_list">
+                        <div>牌子</div>
+                        <div>就好</div>
+                    </div> -->
+                            <!-- <div class="notHave">
+                         <span class="clickNew">暂无数据,请前往<span class="che_color"> 添加新车</span></span>
+                    </div> -->
+
+                        </div>
+                        <div class="texttitle che_display">
+                            <span>横屏拍摄车牌号,两米以内拍摄</span>
+                            <span class="che_color">示例</span>
+                            <img src="../img/xixi.jpg" alt="">
+                        </div>
+                        <!-- <div class="auto_pai che_display"> 暂时取消手机号 不要手机号
+                    <span>手机号:</span>
+                    <input type="text" placeholder="请输入车主手机号" class="iphone" maxlength="11">
+                </div> -->
+                        <!-- <div class="auto_footer">
+                    <div class="goHome fadeIn">入店</div>
+                </div>
+                <div class="auto_footer">
+                    <div class="goHome haveOrder">接单</div>
+                </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/automate.js"></script>
+<script type="text/html" id="tpl">
+    {{if data.length<=0}} <div class="notHave">
+        <span class="clickNew">暂无数据,请前往
+            <span class="che_color"> 添加新车</span>
+        </span>
+        </div>
+    {{else}} 
+        <div class="dargen">点击继续进行下一步操作~</div>
+        {{each data as v i}}
+        <div class="auto_pai che_display auto_list" data-cartid="{{v.cart_id}}" data-userid="{{v.user_id}}">
+            <div class="cart_pai">{{v.cart_licens}}</div>
+            <div class="show_dots pai_name">{{v.user_name}}</div>
+            <div class="goOn">继续</div>
+        </div>
+        {{/each}} 
+    {{/if}}
+</script>
+
+</html>

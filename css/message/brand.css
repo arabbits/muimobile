@@ -1,0 +1,267 @@
+
+.che_container {
+    width: 100%;
+    height: 100%;
+    /* max-width: 750px; */
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 2.2rem;
+    padding-bottom: 0;
+    /* background-color: #f5f5f5; */
+    font-family:"Microsoft Yahei";
+  }
+  .shows{
+    visibility:visible;
+    z-index: 4; 
+  }
+  .mui-off-canvas-right.mui-transitioning{
+    -webkit-transition: -webkit-transform 500ms cubic-bezier(.165,.84,.44,1);
+    transition: transform 500ms cubic-bezier(.165,.84,.44,1);
+  }
+  
+  
+  .che_header .icon_left{
+    height: 2.2rem; 
+    position: absolute;
+    top: 0;
+    left:.75rem;
+    color: #000;
+    line-height: 2.2rem;
+  }
+  .mui-bar-nav.mui-bar .mui-icon{
+    margin: 0;
+    padding: 0px;
+  }
+  .che_header .icon_left{
+    font-size: 1rem;
+  }
+  
+  
+  .mui-bar-nav~.mui-content{
+    padding-top: 0;
+  }
+  
+  
+  .timer_this{
+      height: 2rem;
+      /* margin-top: .5rem; */
+      padding: 0 1rem;
+      line-height: 2rem;
+      font-size: .65rem;
+    }
+    .timer_this  .nowCity{
+      color: #a0a0a0;
+      font-size: .55rem;
+    }
+    .timer_this .shangHai{
+      padding: 0 1.25rem 0 .5rem;
+    }
+    .timer_this .mui-icon{
+      font-size: .75rem;  
+    }
+    
+    /* 当前定位城市样式 */
+    /* 取消自带背景颜色与border */
+    .mui-content{
+      background-color: transparent;
+    }
+    .mui-indexed-list{
+      border: none;
+      height: auto;
+    }
+    
+    .help_brand{
+      padding-bottom: 0;
+    }
+    /* 取消自带背景颜色与border */
+    
+    /* 热门城市开始 */
+    .hot_brand{
+      padding: 0 1.8rem 0 2rem;
+      font-size: .55rem;
+      background-color: #f5f5f5;
+    }
+    .hot_brand .hotCity{
+      height: 1.8rem;
+      line-height: 1.8rem;
+    }
+    .hot_brand .cityThis{
+      display: -webkit-flex;
+      display: -webkit-box;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap:wrap;
+      padding-bottom: .5rem;
+    }
+    .hot_brand .paddbrand{
+      padding-bottom: .75rem;
+    }
+    .hot_brand .cityThis div{
+      width: 3.1rem;
+      height: 1.3rem;
+      line-height: 1.3rem;
+      border: 1px solid #ccc;
+      border-radius: .2rem;
+      text-align: center;
+      background-color: #fff;
+    }
+    
+    /* 热门城市结束 */
+    /* 搜索框隐藏并去掉下边框线 */
+    .mui-search .mui-placeholder{
+      display: none;
+    }
+    .mui-indexed-list-search{
+      border: none;
+    }
+    /* 修改mui自带样式 */
+    .mui-table-view::before,.mui-table-view::after{
+        background-color: transparent;
+      height: 0;
+        
+    }
+    .mui-table-view-divider::before,
+    .mui-table-view-divider::after{
+      height: 0;
+    }
+    /* A 首字母样式 */
+    .mui-table-view-divider{
+      padding: 0;
+      margin: 0;
+      padding-left: 1rem;
+      height: 1.25rem;
+      line-height: 1.25rem;
+      font-size: .55rem;
+      background-color: #f5f5f5;
+    }
+    /* 内容城市样式 */
+    .mui-table-view-cell{
+      padding: 0;
+      margin:0;
+      height: 2rem;
+      line-height: 2rem;
+      padding-left: 1rem;
+      font-size: .65rem;
+      background-color: #fff;
+    }
+    
+    /* 修改mui自带样式结束 */
+    .mui-indexed-list,.mui-ios .mui-indexed-list-inner{
+      height: 100% !important;
+    }
+    
+    /*           修改导航abcd              */
+    .mui-indexed-list-bar {
+      width: 2.5rem;
+      height: auto;
+      background-color: transparent;
+      position: fixed;
+      z-index: 10;
+      height: 100%;
+      -webkit-transition: none;
+    }
+    .mui-indexed-list-bar.active{
+      background-color: transparent;
+    }
+    .mui-indexed-list-bar.active a{
+      color: #a7a7a7;
+    }
+    .mui-indexed-list-bar a{
+      display: block;
+      text-align: center;
+      font-size: .55rem;
+      text-align: center;
+      padding: 0px;
+      text-decoration: none;
+      color: #a7a7a7;
+      height: 1.1rem;
+    }
+    #list{
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+    
+    /*           修改导航abcd 结束              */
+    
+    .brace{
+      background-color: #f5f5f5;
+    }
+    .mui-table-view .mui-table-view-cell:after{
+      background-color: #fff;
+    }
+    .mui-off-canvas-right {
+      background-color: #fff;
+      position: absolute;
+    
+    }
+    .mui-off-canvas-right .canvas_title{
+      padding-left: .75rem;
+      font-size: .55rem;
+      height: 1.25rem;
+      background-color: #f5f5f5;
+      line-height: 1.25rem;
+      letter-spacing: .05rem;
+    }
+    
+    .mui-off-canvas-right .mui-scroll{
+      position: static;
+    }
+    .mui-scroll-wrapper .mui-scroll .asid_lis{
+      padding-left: .75rem;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      font-size: .65rem;
+    }
+    .mui-scroll-wrapper .mui-scroll .father{
+      background-color: #f5f5f5;
+      padding-left: .5rem;
+      height: 2rem;
+      line-height: 2rem;
+    }
+  
+  
+    .mui-bar {
+        box-shadow: none;
+    }
+  /* 遮幕板 */
+  .mui-backdrop {
+      position: absolute;
+      top: 2.2rem;
+      right:0;
+      bottom: 0;
+      left: 0;
+      z-index: 8;
+      background-color: rgba(0,0,0,.3);
+      transform: translate3d(-13.125rem,0,0);
+      /* -webkit-transition: .3s; */
+      /* animation:shit .35s linear ; */
+  }
+  
+  
+  
+  /* 子页面carstyle样式 */
+  
+  .contain{
+    font-size: .65rem;
+  }
+  .contain .zu_Name{
+    height: 1.25rem;
+    line-height: 1.25rem;
+    color: #a0a0a0;
+    padding-left: 1.1rem;
+    letter-spacing: .05rem;
+  }
+  .contain .zuli{
+    height: 2.25rem;
+    line-height: 2.25rem;
+    padding-left: 1.8rem;
+    letter-spacing: .05rem;
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

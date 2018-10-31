@@ -1,0 +1,25 @@
+.che_main .commodity_main .commodity_header {
+  font-size: .75rem;
+}
+.che_main .commodity_main .commodity_header .addPro {
+  justify-content: start;
+}
+.che_main .commodity_main .commodity_header .addPro .addPro_main {
+  margin-left: .5rem;
+}
+.che_main .commodity_main .commodity_header .addPro .addPro_main .addPro_father {
+  padding-right: .25rem;
+  align-items: center;
+}
+.che_main .commodity_main .commodity_header .addPro .addPro_main .addPro_father .xuanze {
+  width: .9rem;
+  height: .9rem;
+  border: 1px solid #ea5504;
+  margin-right: .25rem;
+}
+.che_main .commodity_main .commodity_header .addPro .addPro_main .addPro_father .ngv {
+  background-color: #ea5504;
+}
+.che_main .commodity_main .commodity_header .addPro .addPro_main .addPro_father:last-child {
+  padding-right: 0;
+}

@@ -1,0 +1,140 @@
+.che_container {
+  padding-bottom: 0;
+}
+.che_container .che_header a {
+  font-size: .75rem;
+}
+.che_container .che_main .che_order {
+  margin-bottom: .5rem;
+}
+.che_container .che_main .che_order .order_slider #segmented {
+  height: 2.5rem;
+}
+.che_container .che_main .che_order .order_slider #segmented .orderTab {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  text-align: center;
+  background-color: #fff;
+}
+.che_container .che_main .che_order .order_slider #segmented .orderTab .w33 {
+  width: 33.33333333%;
+}
+.che_container .che_main .che_order .order_slider #segmented .orderTab a {
+  font-size: .65rem;
+  line-height: 2.5rem;
+}
+.che_container .che_main .che_order .order_slider #segmented .orderTab .mui-active {
+  color: #ea5504;
+  border-bottom: 2px solid #ea5504;
+}
+.che_container .che_main .che_order .order_slider .mui-scroll-wrapper {
+  margin-top: .1rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain {
+  letter-spacing: .05rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: .5rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .headConten {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 .75rem;
+  font-size: .8rem;
+  justify-content: space-between;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .headConten .head_left > .icon-icon {
+  font-size: 1.1rem;
+  margin-right: .3rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .headConten .head_left > .mui-icon-arrowright {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  color: #a0a0a0;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .headConten .waitOrder {
+  font-size: .75rem;
+  color: #ea5504;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .headConten .waitOrder.yesOrder {
+  background-color: #ccc;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .content_one .order_number {
+  margin-left: .75rem;
+  font-size: .75rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-top: 1px solid #f5f5f5;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .product_order {
+  height: 5rem;
+  padding: .25rem .5rem .75rem .75rem;
+  justify-content: start;
+  background-color: #f5f5f5;
+  margin-bottom: .25rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .product_order .product_img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: .5rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .product_order .product_manner {
+  font-size: .7rem;
+  width: 9.5rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .product_order .product_picer {
+  font-size: .6rem;
+  font-weight: 600;
+  width: 3.5rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .product_order .product_picer > del {
+  color: #a0a0a0;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom {
+  font-size: .75rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom > div {
+  height: 2rem;
+  line-height: 2rem;
+  padding-left: .75rem;
+  padding-right: .5rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderOne {
+  justify-content: start;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderOne > .order_length {
+  margin-left: .4rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderTwo {
+  justify-content: space-between;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderTwo .che_color {
+  font-size: .7rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderThree {
+  padding-left: 1.8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderThree .icon-shanchu1 {
+  font-size: .8rem;
+}
+.che_container .che_main .che_order .order_slider .ordersMain .order_content .order_bottom .orderThree .order_btn > div {
+  height: 1.3rem;
+  line-height: 1.3rem;
+  width: 3.8rem;
+  text-align: center;
+  border: 1px solid #a0a0a0;
+  border-radius: .75rem;
+  margin-left: .7rem;
+  font-size: .7rem;
+}

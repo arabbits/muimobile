@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/find/historyProduct.css">
+    <title>车吧族</title>
+    <style>
+        .cardName{
+            justify-content: space-between;
+            padding-right: .5rem;
+        }
+        .mui-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+
+        <div class="che_header">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-left-nav "></span>
+            </a>
+            <h4>结算详情</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="volist hiden">
+            <div class="volist_nomode">
+                <div class="volist_bgimg che_display">
+                    <div class="backImg"></div>
+                    <div>空空如也</div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div class="che_main hiden">
+            <div class="che_order">
+                <div class="order_slider">
+                    <div class="mui-scroll-wrapper">
+                        <div class="mui-scroll">
+                            <div class="mui-slider-group ordersMain ">
+                                <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                                    <div class="order_content" data-id="{{v.id}}">
+                                        <div class="content_one">
+                                            <div class="headConten">
+                                                <div class="head_left che_display">
+                                                    <span class="iconfont icon-icon"></span>
+                                                    <span class="store_name">{{v.storeInfo}}</span>
+                                                    <span class="mui-icon mui-icon-arrowright"></span>
+                                                </div>
+                                                <div class=" che_acolor">下单时间：<span style="color:#000">{{v.add_time}}</span></div>
+                                                
+                                            </div>
+                                            <div class="order_number">订单编号:<span class="this_number">{{v.ordersn}}</span></div>
+                                        </div>
+                                        <div class="order_bottom">
+                                            <div class="orderOne che_display che_acolor">
+                                                <span>预约时间：</span>
+                                                <span class="orderTime">{{v.time}}</span>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/find/historyProduct.js"></script>
+    
+<script type="text/html" id="allOrder">
+    {{each data as v i}}
+         <div class="order_content" data-id="{{v.id}}">
+             <div class="content_one">
+                 <div class="headConten">
+                     <div class="head_left che_display">
+                         <span class="iconfont icon-icon"></span>
+                         <span class="store_name">{{v.storeInfo}}</span>
+                         <!-- <span class="mui-icon mui-icon-arrowright"></span> -->
+                     </div>
+                     <div class=" che_acolor">下单时间：<span style="color:#000">{{v.add_time}}</span></div>
+                     
+                 </div>
+                 <div class="order_number">订单编号:<span class="this_number">{{v.ordersn}}</span></div>
+             </div>
+             <div class="order_bottom">
+                 <div class="orderOne che_display ">
+                     <span>实付金额：</span>
+                     {{if v.realprice}}
+                     <span class="orderTime che_color">￥{{v.realprice}}</span>
+                     {{else}}
+                     <span class="orderTime che_color">￥0</span>
+                     {{/if}}
+                 </div>
+                
+             </div>
+         </div>
+     {{/each}} 
+</script>
+
+</html>

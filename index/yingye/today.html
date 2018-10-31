@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/css/mui.picker.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/yingye/allToday.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>每日营业额</h4>
+        </div>
+        <div class="loading hiden">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="drive_main">
+                        <div class="eachres">
+                            <!-- <div id="main" style="width: 646px;height:436px;"> -->
+                            <div class="chart" id="breakChart"></div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="searchs">
+                        <div class="day_search che_display">
+                            <div class="search_fa">
+                                <input type="text" class="day_start" placeholder="yyyy-MM-dd" readonly>
+                                <span>--</span>
+                                <input type="text" class="day_end" placeholder="yyyy-MM-dd" readonly>
+                            </div>
+                            <button class="go_search">查找</button>
+                        </div>
+                    </div>
+                    <div class="today_all">
+                        <span>总营业额:</span>
+                        <span><em class="all_dayPrice">0</em>元</span>
+                        <span>总预收款:</span>
+                        <span><em class="all_yuPrice">0</em>元</span>
+                    </div>
+                    <div class="today_main">
+                        <div class="day_box che_display">
+                            <div class="day_title che_display">
+                                <span>时间</span>
+                                <span>今日营业额</span>
+                                <span>微信</span>
+                                <span>支付宝</span>
+                                <span>现金</span>
+                                <span>银行卡</span>
+                                <span>挂账</span>
+                                <span>会员卡</span>
+                                <span>其他</span>
+                            </div>
+                            <div class="day_mains todayMoney">
+                                <!-- <div class="che_display titleSons">
+                                    <span>2018-07-12</span>
+                                    <span>579.00</span>
+                                    <span>579.00</span>
+                                    <span>579.00</span>
+                                    <span>579.00</span>
+                                    <span>579.00</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages shitsOne">
+                        <div class="che_display page_main">
+                            <span class="mui-icon mui-icon-arrowleft"  data-id="1"></span>
+                            <div class="page_pages onePage che_display" data-id="1">
+                                <span class="page_color page_son">1</span>
+                                <span class="page_son">2</span>
+                                <span class="page_son">3</span>
+                                <span class="page_son">4</span>
+                                <span class="page_son">5</span>
+                            </div>
+                            <span class="mui-icon mui-icon-arrowright" data-id="1"></span>
+                            <div class="page_input che_display">
+                                <span>到第</span>
+                                <input type="text" value="1" class="pagesNum onePagenum">
+                                <span>页</span>
+                                <button class="btns" data-id="1">确定</button>
+                            </div>
+                            <div class="page_alls">
+                                <span>共</span>
+                                <span class="page_twoNum">0</span>
+                                <span>条</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="today_main">
+                        <div class="day_box che_display todayBox">
+                            <div class="day_title che_display">
+                                <span>时间</span>
+                                <span>今日预收款</span>
+                                <span>微信</span>
+                                <span>支付宝</span>
+                                <span>现金</span>
+                                <span>银行卡</span>
+                                <span>其他</span>
+                            </div>
+                            <div class="day_mains todayYu">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages shitsTwo">
+                        <div class="che_display page_main">
+                            <span class="mui-icon mui-icon-arrowleft" data-id="2"></span>
+                            <div class="page_pages twoPage che_display" data-id="2">
+                                <span class="page_color page_son">1</span>
+                                <span class="page_son">2</span>
+                                <span class="page_son">3</span>
+                            </div>
+                            <span class="mui-icon mui-icon-arrowright" data-id="2"></span>
+                            <div class="page_input che_display">
+                                <span>到第</span>
+                                <input type="text" value="1" class="pagesNum twoPagenum">
+                                <span>页</span>
+                                <button class="btns" data-id="2">确定</button>
+                            </div>
+                            <div class="page_alls">
+                                <span>共</span>
+                                <span class="page_num">39</span>
+                                <span>条</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/js/jquery.min.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../lib/js/mui.picker.min.1.js"></script>
+<script src="../../lib/js/echarts.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/yingye.js"></script>
+<script src="../../js/index/yingye/today.js"></script>
+<script type="text/html" id="tpl">
+    {{if orderData.length>0 }}
+        {{each orderData as v i}}
+            <div class="che_display titleSons">
+                <span>{{v.c_time}}</span>
+                <span>{{v.allPrice}}</span>
+                <span>{{v.wechatOrder}}</span>
+                <span>{{v.alipayOrder}}</span>
+                <span>{{v.moneyOrder}}</span>
+                <span>{{v.cardOrder}}</span>
+                <span>{{v.creditOrder}}</span>
+                <span>{{v.clubOrder}}</span>
+                <span>{{v.restOrder}}</span>
+            </div>
+        {{/each}}
+    {{else}}
+        <!-- <div class="che_display noHave">
+            <span>暂无数据</span>
+        </div> -->
+    {{/if}}
+</script>
+<script type="text/html" id="tpls">
+    {{if saleData.length>0 }}
+        {{each saleData as v i}}
+            <div class="che_display titleSons">
+                <span>{{v.c_time}}</span>
+                <span>{{v.allPrice}}</span>
+                <span>{{v.wechatOrder}}</span>
+                <span>{{v.alipayOrder}}</span>
+                <span>{{v.moneyOrder}}</span>
+                <span>{{v.cardOrder}}</span>
+                <span>{{v.restOrder}}</span>
+            </div>
+        {{/each}}
+    {{else}}
+        <!-- <div class="che_display noHave">
+            <span>暂无数据</span>
+        </div> -->
+    {{/if}}
+</script>
+</html>

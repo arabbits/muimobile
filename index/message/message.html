@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css//message/message.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>添加新车</h4>
+        </div>
+        
+        <div class="loading hiden">
+                <img src="../../img/loading.gif" alt="">
+            </div>
+        <div class="che_main">
+            <div class="addcar_box">
+                <div class="addcar_main che_display">
+                    <span class="addcar_pai">车牌号:</span>
+                    <div class="che_display">
+                        <span class="addcar_plate che_display">
+                            <span class="province">沪</span>
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                            <span class="mui-icon mui-icon-arrowup"></span>
+                        </span>
+                        <input type="text" placeholder="请输入车牌号" maxlength="6" class="paizi">
+                    </div>
+                </div>
+                <div class="addcar_main che_display">
+                    <span class="addcar_pai">手机号:</span>
+                    <div class="che_display">
+                        <input type="text" placeholder="请输入手机号" maxlength="11" class="phone">
+                    </div>
+                </div>
+                <div class="addcar_main che_display">
+                    <span class="addcar_pai">姓 名:</span>
+                    <div class="che_display">
+                        <input type="text" placeholder="请输入您的姓名" maxlength="11" class="name">
+                    </div>
+                </div>
+                <div class="addcar_main che_display">
+                    <span class="addcar_pai">车 型:</span>
+                    <div class="che_display selects">
+                        <!-- <input type="text" placeholder="请选择您的车型" maxlength="11" class="phone" readonly> -->
+                        <div class="dianji show_dots che_text_spac">请选择您的车型</div>
+                        <span class="mui-icon mui-icon-arrowright"></span>
+                    </div>
+                </div>
+                <div class="addcar_bottom goHomes">
+                    <div>继续</div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- 弹出沪名 -->
+        
+        <div id="pop_bottom" class="mui-popover order_zindex">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="order_botPover mui-clearfix">
+                        <li class="order_carry">
+                            <span>京</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>津</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>黑</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>吉</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>辽</span>
+                        </li>
+
+                        <li class="order_carry">
+                            <span>冀</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>豫</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>鲁</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>晋</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>陕</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>蒙</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>宁</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>甘</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>新</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>青</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>藏</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>鄂</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>皖</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>苏</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>沪</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>浙</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>闽</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>湘</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>赣</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>川</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>渝</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>贵</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>云</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>粤</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>桂</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>琼</span>
+                        </li>
+                        <li class="order_carry">
+                            <span>澳</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/zepto/zepto.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/message/message.js"></script>
+
+</html>

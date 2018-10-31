@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/addNewcar.css">
+    <link rel="stylesheet" href="../css/index/manual.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="./pickSingle.html">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4>手动接单</h4>
+            <!-- <a class="icon_right">
+                <span>新车添加</span>
+            </a> -->
+        </div>
+        
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="incar_head">
+                        <input type="text" placeholder="输入车牌号码" class="search">
+                        <div class="vince">
+                            <span class="shanghai">省份</span>
+                            <!-- <span class="mui-icon mui-icon-search icon_search"></span> -->
+                        </div>
+                    </div>
+                    <div class="manual_main">
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 弹出沪名 -->
+        <div id="pop_bottom" class="mui-popover order_zindex">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="order_botPover mui-clearfix">
+                            <li class="order_carry">
+                                <span>京</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>津</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>黑</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>吉</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>辽</span>
+                            </li>
+    
+                            <li class="order_carry">
+                                <span>冀</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>豫</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>鲁</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>晋</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>陕</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>蒙</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>宁</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>甘</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>新</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>青</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>藏</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>鄂</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>皖</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>苏</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>沪</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>浙</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>闽</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>湘</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>赣</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>川</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>渝</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>贵</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>云</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>粤</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>桂</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>琼</span>
+                            </li>
+                            <li class="order_carry">
+                                <span>澳</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/manual.js"></script>
+<script type="text/html" id="tpl">
+    {{if data.length<=0}}
+    <div class="notHave">
+         <span class="clickNew">暂无数据,请前往<span class="che_color"> 添加新车</span></span>
+    </div>
+    {{else}}
+    {{each data as v i}}
+    <div class="manual_top che_display" data-cartid="{{v.cart_id}}" data-userid="{{v.user_id}}">
+        <div class="cart_pai">{{v.cart_licens}}</div>
+        <div>{{v.user_name}}</div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+
+</html>

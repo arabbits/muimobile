@@ -1,0 +1,205 @@
+.che_container {
+  background-color: #f5f5f5;
+}
+.che_container .che_main .mui-scroll {
+  font-size: .7rem;
+  padding-bottom: .5rem;
+}
+.che_container .che_main .mui-scroll .reception_header {
+  height: 3.6rem;
+  background-color: #fff;
+  border-top: 1px solid #f5f5f5;
+  padding: 0 .75rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .6rem;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.che_container .che_main .mui-scroll .reception_nav {
+  padding-left: .7rem;
+  background-color: #fff;
+  letter-spacing: 1px;
+  margin-top: .5rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top {
+  height: 2.1rem;
+  padding-right: .7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex {
+  justify-content: space-between;
+  width: 6.8rem;
+  color: #a0a0a0;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .select_man {
+  padding-right: .1rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .iconfont {
+  font-size: .75rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .nav_iphone {
+  letter-spacing: 0px;
+}
+.che_container .che_main .mui-scroll .reception_nav :last-child {
+  border: none;
+}
+.che_container .che_main .mui-scroll .reception_coupon .list_coupon {
+  text-align: center;
+  background-color: #fff;
+  margin-top: .5rem;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  padding-right: .7rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList {
+  padding-left: .7rem;
+  background-color: #fff;
+  letter-spacing: 1px;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .couponName {
+  height: 2.1rem;
+  padding-right: .7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .couponName .carMan {
+  width: 3.75rem;
+  text-align: center;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .couponName .namePro {
+  width: 4.2rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .spance {
+  letter-spacing: 0px;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .spance .allpitch {
+  font-size: 1.1rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .spance .shuru {
+  margin: 0;
+  width: 1.5rem;
+  padding: .25rem 0;
+  font-size: .65rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle {
+  margin-top: .25rem;
+  font-size: .7rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .oneStyle {
+  height: 2rem;
+  align-items: center;
+  width: 5rem;
+  justify-content: space-between;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .oneStyle .addCoupon {
+  padding: 0px .5rem;
+  background-color: #ea5504;
+  color: #fff;
+  font-size: .6rem;
+  border-radius: .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .commodity_addman {
+  margin-left: .5rem;
+  position: relative;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .commodity_addman .icon-guanbi {
+  display: inline-block;
+  position: absolute;
+  right: 34px;
+  top: 7px;
+  width: 2rem;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-left: 1px solid #dcdcdc;
+  color: #d2d2d2;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .commodity_addman #select {
+  font-size: .7rem;
+  height: auto;
+  padding: 8px 10px;
+  padding-right: 0px;
+  margin: 0px;
+  margin-bottom: .25rem;
+  width: 135px;
+  border: 1px solid #dcdcdc!important;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .commodity_addman .shits {
+  color: #d2d2d2;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_oneStyle .commodity_addman .xixi {
+  color: #ea5504;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_btn {
+  padding: .25rem 0;
+  padding-right: .7rem;
+  justify-content: space-around;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top .coupon_btn > div {
+  width: 4rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  color: #fff;
+  background-color: #ea5504;
+  text-align: center;
+  border-radius: .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top table {
+  text-align: center;
+  margin-bottom: 1rem;
+  border: none;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top table tbody .del {
+  padding: .15rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top table tbody .del > button {
+  height: 1.1rem;
+  line-height: 1.1rem;
+  padding: 0 .25rem;
+  font-size: .6rem;
+  background-color: #ea5504;
+  color: #fff;
+  border: none;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top table tbody .forms {
+  margin-left: .6rem;
+}
+.che_container .che_main .mui-scroll .reception_footer {
+  height: 3.1rem;
+  padding: .5rem 0;
+}
+.che_container .che_main .mui-scroll .reception_footer .reception_message {
+  height: 2.1rem;
+  line-height: 2.1rem;
+  border-radius: .25rem;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  background-color: #ea5504;
+  background: -webkit-linear-gradient(left, #ff8417, #ea5504);
+  background: linear-gradient(left, #ff8417, #ea5504);
+}
+.che_container .che_footer {
+  display: none;
+  background-color: #ea5504;
+  color: #fff;
+}

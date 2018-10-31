@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/reception.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4>接待信息</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                        <div class="reception_navs">
+                            <!-- 性别先隐藏了 -->
+                            <!-- <div class="reception_header che_display">
+                                <div class="rechead_img"><img src="" alt=""></div>
+                                <div class="rechead_main che_display">
+                                    <span>沪F88888</span>
+                                    <span>未有车型</span>
+                                </div>
+                            </div>
+                            <div class="reception_nav">
+                                <div class="recenav_top che_display">
+                                    <span>客户</span>
+                                    <span class="recnav_sex che_display">
+                                        <div class="select_sex">
+                                            <span class="select_man"> 
+                                                <span class="iconfont icon-dian che_color"></span>
+                                                <span>男</span>
+                                            </span>
+                                            <span class="select_man">
+                                                <span class="iconfont icon-dian"></span>
+                                                <span>女</span>
+                                            </span>
+                                        </div>
+                                        <span>程双喜</span>
+                                    </span>
+                                </div>
+                                <div class="recenav_top che_display">
+                                    <span>手机</span>
+                                    <span class="nav_iphone">
+                                        12332131232132
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="reception_coupon hiden coupon_All">
+                                <div class="list_coupon">卡券列表</div>
+                                <div class="couponList">
+                                    <!-- <div class="list_coupon che_color">暂无卡券</div> -->
+                                </div>
+                        </div>
+                        <div class="reception_main hiden">
+                        </div>
+                        <div class="reception_coupon validate_All">
+                            <!-- <div class="list_coupon">验车单</div>
+                            <div class="validate che_display">
+                                <span>检查结果:</span>
+                                <div class="validate_father che_display">
+                                    <span class="dispose val_red"></span>
+                                    <span> 建议检查</span>
+                                </div>
+                                <div class="validate_father che_display">
+                                    <span class="dispose val_yellow"></span>
+                                    <span>留意观察</span>
+                                </div>
+                                <div class="validate_father che_display">
+                                    <span class="dispose val_green"></span>
+                                    <span>未见异常</span>
+                                </div>
+                            </div>
+                            <div class="validate">
+                                <div class="che_display validate_father once">
+                                    <div class="che_display">
+                                        <span class="show_dots">检查项目:</span>
+                                        <span class="show_dots val_name">底盘保养底盘保养</span>
+                                    </div>
+                                    <div class="che_display">
+                                        <span>检查结果:</span>
+                                        <div class="val_result che_display">
+                                            <span class="val_bgc red val_red"></span>
+                                            <span class="val_bgc yellow val_yellow"></span>
+                                            <span class="val_bgc green val_green"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="che_display validate_father second" >
+                                    <div class=" che_display">
+                                        <span>上次结果:</span>
+                                        <span class="val_yellow dispose"></span>
+                                    </div>
+                                    <div class="che_display">
+                                        <span>上次操作:</span>
+                                        <span> </span>
+                                    </div>
+                                </div>
+                                <div class=" validate_father thirdly">
+                                    <div class="che_display">
+                                        <span>处理方法:</span>
+                                        <textarea id="textarea" cols="30" rows="10"></textarea>
+                                    </div>
+                                    <div class="che_display">
+                                        <span>备注:</span>
+                                        <textarea id="textarea" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                
+                            </div> -->
+                        </div>
+
+
+
+                       
+                </div>
+            </div>
+        </div>
+        <div class="che_footer">
+            <div class="reception_footer rudian">
+                <div class="reception_message">
+                    入店
+                </div>
+            </div>
+            <div class=" footer_kou">
+                <div class="reception_footer jiedan">
+                    <div class="reception_message">
+                        接单
+                    </div>
+                </div>
+                <div class="reception_footer kouka hiden" >
+                    <div class="reception_message">
+                        扣卡
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/reception.js"></script>   
+<script type="text/html" id="tpl">
+    <div class="reception_header che_display">
+        <div class="rechead_img">
+            <img src="{{data.userInfo.avatar}}" alt="">
+        </div>
+        <div class="rechead_main che_display">
+            <span class="carName">{{data.cartInfo.cart_licens}}</span>
+            <span>{{data.cartInfo.type_name}}</span>
+        </div>
+    </div>
+    <div class="reception_nav">
+        <div class="recenav_top che_display">
+            <span>客户</span>
+            <span class="carMan">{{data.userInfo.user_name}}</span>
+        </div>
+        <div class="recenav_top che_display">
+            <span>手机</span>
+            <span class="nav_iphone">{{data.userInfo.phone}}</span>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tpls">
+    <div class="recemain_title">
+        <span>提醒事项</span>
+        <span class="tixing_nums">({{data.length}})</span>
+    </div>
+    <div class="recemain_main">
+        {{each data as v i}}
+        
+        <div class="recemain_one che_display">
+            <div class="che_display ">
+                <span>{{v.partsName}}</span>
+                <span>到期时间</span>
+            </div>
+            <div class="che_display recemain_sons">
+                <span>上次维修时间: {{v.update_time.split(' ')[0]}}</span>
+                {{if v.days<=0}}
+                <span>还有<span class="che_color">{{v.days}}</span>到期</span>
+                {{else}}
+                <span>还有{{v.days}}到期</span>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    
+</script>
+<script type="text/html" id="tplcoupon">
+    {{if data[0].cardList.length ==0}}
+    <div class="list_coupon che_color">暂无卡券</div>
+    {{else}}
+    {{each data[0].cardList as v i}}
+    <div class="recenav_top">
+        <div class="che_display">
+            <span>卡券名称</span>
+            <span>{{v.card_name}}</span>
+        </div>
+        <div class="che_display">
+            <span>到期时间</span>
+            <span>{{v.add_time.split(' ')[0]}}</span>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<script type="text/html" id="validate">
+    <div class="list_coupon">验车单</div>
+    <div class="validate che_display " id="fristVal">
+        <span>检查结果:</span>
+        <div class="validate_father che_display">
+            <span class="dispose val_red"></span>
+            <span> 建议检查</span>
+        </div>
+        <div class="validate_father che_display">
+            <span class="dispose val_yellow"></span>
+            <span>留意观察</span>
+        </div>
+        <div class="validate_father che_display">
+            <span class="dispose val_green"></span>
+            <span>未见异常</span>
+        </div>
+    </div>
+    {{each data as v i}}
+        <div class="validate" data-id={{v.goods_id}} data-temp={{v.example_id}}>
+            <div class="che_display validate_father once">
+                <div class="che_display">
+                    <span class="show_dots">检查项目:</span>
+                    <span class="show_dots val_name">{{v.goods_name}}</span>
+                </div>
+                <div class="che_display">
+                    <span>检查结果:</span>
+                    <div class="val_result che_display">
+                        <span class="val_bgc red val_red" data-id="1"></span>
+                        <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                        <span class="val_bgc green val_green" data-id="3"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="che_display validate_father second" >
+                <div class=" che_display">
+                    <span>上次结果:</span>
+                    {{if v.last_grade==1}}
+                    <span class="val_red dispose"></span>
+                    {{else if v.last_grade == 2}}
+                    <span class="val_yellow dispose"></span>
+                    {{else if v.last_grade == 3}}
+                    <span class="val_green dispose"></span>
+
+                    {{/if}}                    
+                </div>
+                <div class="che_display">
+                    <span>上次操作:</span>
+                    {{if v.last_is_dispose=="未处理"}}
+                    <span class="che_color">{{v.last_is_dispose}}</span>
+                    {{else}}
+                    <span>{{v.last_is_dispose}}</span>
+                    {{/if}}
+                </div>
+            </div>
+            <div class=" validate_father thirdly">
+                <div class="che_display">
+                    <span>处理方法:</span>
+                    <textarea id="textarea" cols="30" rows="10"></textarea>
+                </div>
+                <div class="che_display">
+                    <span>备注:</span>
+                    <textarea id="remark" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+</html>

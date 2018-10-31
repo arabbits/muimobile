@@ -1,0 +1,98 @@
+.che_main .mui-scroll {
+  padding: 0 .5rem;
+  font-size: .75rem;
+}
+.che_main .mui-scroll .complete_main {
+  background-color: #fff;
+  margin-top: .5rem;
+  padding: 0 .75rem;
+  border-radius: .5rem;
+  box-shadow: 0.05rem 0.05rem 1.3rem -0.25rem #ccc;
+}
+.che_main .mui-scroll .complete_main .complete_one {
+  height: 2.5rem;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid #f5f5f5;
+  letter-spacing: 1px;
+  padding-left: .25rem;
+}
+.che_main .mui-scroll .complete_main .complete_one .complete_pai {
+  padding-left: .75rem;
+  color: #a0a0a0;
+}
+.che_main .mui-scroll .complete_main .complete_pro {
+  letter-spacing: .1rem;
+  align-items: center;
+  color: #ea5504;
+  justify-content: center;
+}
+.che_main .mui-scroll .complete_main .complete_pro > .iconfont {
+  padding-left: .25rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  transform: rotate(-90deg);
+}
+.che_main .mui-scroll .complete_main .complete_pro .trans {
+  transform: rotate(0deg);
+}
+.che_main .mui-scroll .complete_main .tosuit_content {
+  padding-left: .25rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 1px;
+  align-items: center;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_main .mui-scroll .complete_main .tosuit_content .tosuit_pai {
+  font-size: .8rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_content .tosuit_num {
+  padding-left: .5rem;
+  font-size: .7rem;
+  color: #a0a0a0;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom > .tosuit_content > .tosuit_pai {
+  width: 3rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom > .tosuit_content > .tosuit_num {
+  padding-left: 1rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom > .tosuit_content .picking_btn {
+  margin-left: 1.25rem;
+  padding: 0 .6rem;
+  background-color: #ea5504;
+  color: #fff;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: .6rem;
+  border-radius: .25rem;
+  box-shadow: 0px 0px .35rem 0px #ea5504;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tousit_parts {
+  letter-spacing: 1px;
+  padding-left: .25rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tousit_parts > .tosuit_pai {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 3rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tousit_parts .parts_one {
+  padding: .75rem 0 .5rem 1rem;
+  font-size: .7rem;
+  color: #a0a0a0;
+  flex-direction: column;
+  justify-content: start;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tousit_parts .parts_one .parts_son {
+  line-height: 1.3rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tousit_parts .parts_one .parts_son > span {
+  margin-right: .5rem;
+}
+.che_main .mui-scroll .complete_main .tosuit_bottom .tosuit_all {
+  padding: 0;
+  justify-content: center;
+}

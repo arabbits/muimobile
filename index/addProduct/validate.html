@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index/reception.css">
+    <title>车吧族</title>
+    <style>
+        .che_container{
+            padding-bottom: 2.5rem;
+        }
+        .che_container .che_footer{
+            height: 2.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="che_container">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" >
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>验车单</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        
+        <div class="loading hiden">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="reception_coupon validate_All">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="che_footer">
+            <div class="reception_footer rudian">
+                <div class="reception_message">
+                    完成
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/zepto/zepto.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/index/addProduct/validate.js"></script>   
+<script type="text/html" id="validate">
+    <div class="validate che_display " id="fristVal">
+        <span>检查结果:</span>
+        <div class="validate_father che_display">
+            <span class="dispose val_red"></span>
+            <span> 建议检查</span>
+        </div>
+        <div class="validate_father che_display">
+            <span class="dispose val_yellow"></span>
+            <span>留意观察</span>
+        </div>
+        <div class="validate_father che_display">
+            <span class="dispose val_green"></span>
+            <span>未见异常</span>
+        </div>
+    </div>
+    {{each count as v i}}
+        <div class="validate" data-id={{v.goods_id}} data-temp={{v.example_id}}>
+            <div class="che_display validate_father once">
+                <div class="che_display">
+                    <span class="show_dots">检查项目:</span>
+                    <span class="show_dots val_name">{{v.goods_name}}</span>
+                </div>
+                <div class="che_display">
+                    <span>检查结果:</span>
+                    <div class="val_result che_display">
+                            {{if v.order_grade==1}}
+                            <span class=" red val_red select" data-id="1"></span>
+                            <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                            <span class="val_bgc green val_green" data-id="3"></span>
+                            
+                            {{else if v.order_grade==2}}
+                            <span class="val_bgc red val_red" data-id="1"></span>
+                            <span class=" yellow val_yellow select" data-id="2"></span>
+                            <span class="val_bgc green val_green" data-id="3"></span>
+                            {{else if v.order_grade==3}}
+                            <span class="val_bgc red val_red" data-id="1"></span>
+                            <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                            <span class=" green val_green select" data-id="3"></span>
+                            {{else if !v.order_grade}}
+                            <span class="val_bgc red val_red" data-id="1"></span>
+                            <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                            <span class="val_bgc green val_green" data-id="3"></span>
+
+                            {{/if}}
+                    </div>
+                </div>
+            </div>
+            <div class="che_display validate_father second" >
+                <div class=" che_display">
+                    <span>上次结果:</span>
+                    {{if v.last_grade==1}}
+                    <span class="val_red dispose"></span>
+                    {{else if v.last_grade == 2}}
+                    <span class="val_yellow dispose"></span>
+                    {{else if v.last_grade == 3}}
+                    <span class="val_green dispose"></span>
+
+                    {{/if}}                    
+                </div>
+                <div class="che_display">
+                    <span>上次操作:</span>
+                    {{if v.last_is_dispose=="未处理"}}
+                    <span class="che_color">{{v.last_is_dispose}}</span>
+                    {{else}}
+                    <span>{{v.last_is_dispose}}</span>
+                    {{/if}}
+                </div>
+            </div>
+            <div class=" validate_father thirdly">
+                <div class="che_display">
+                    <span>处理方法:</span>
+                    <textarea id="textarea" cols="30" rows="10">{{v.order_dispose_way}}</textarea>
+                </div>
+                <div class="che_display">
+                    <span>备注:</span>
+                    <textarea id="remark" cols="30" rows="10">{{v.order_remark}}</textarea>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
+
+
+</html>

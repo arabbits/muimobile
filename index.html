@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="./lib/css/mui.min.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./less/index.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="loading hiden">
+        <img src="./img/loading.gif" alt="">
+    </div>
+    <div class="che_container">
+        <div class="che_main ">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll hiden">
+                    <div class="index_header che_display">
+                        <div class="head_top">
+                            <div class="father_box">
+                                <input type="text" class="search" placeholder="请输入客户名进行查询">
+                                <span class="mui-icon mui-icon-search icon_search"></span>
+                            </div>
+                        </div>
+                        <div class="header_center">
+
+                        </div>
+                        <div class="head_bottom che_display">
+                            <div class="headr_first" data-id="1">
+                                <span>总车数</span>
+                                <span class="numCar">0辆</span>
+                            </div>
+                            <div>
+                                <span>今日</span>
+                                <span class="numPrice">￥0</span>
+                            </div>
+                            <div class="headr_first">
+                                <span>扣券</span>
+                                <span class="number">0次</span>
+                            </div>
+                            <div>
+                                <span>扣卡</span>
+                                <span class="numVip">￥0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index_main che_display">
+                            <div class="mainGo" data-id="1">
+                                <span class="iconfont icon-mulu"></span>
+                                <span>接车单</span>
+                            </div>
+                            <div class="mainGo" data-id="2">
+                                <span class="iconfont icon-riqi"></span>
+                                <span>领料单</span>
+                            </div>
+                            <div class="mainGo" data-id="3">
+                                <span class="iconfont icon-anzhuangweixiuxianxing"></span>
+                                <span>施工单</span>
+                            </div>
+                            <!-- <div class="mainGo" data-id="4">
+                                    <span class="iconfont icon-wancheng"></span>
+                                    <span>完工单</span>
+                                </div> -->
+                            <div class="mainGo soMoney" data-id="4">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>收款</span>
+                            </div>
+                            <!-- <div class="mainGo" data-id="6">
+                                    <span class="iconfont icon-yaochi"></span>
+                                    <span>交车</span>
+                                </div> -->
+                            <div class="mainGo" data-id="5">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>日营业额</span>
+                            </div>
+                            <div class="mainGo" data-id="6">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>临时支出</span>
+                            </div>
+                            <div class="mainGo" data-id="7">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>利润统计</span>
+                            </div>
+                            <div class="mainGo" data-id="8">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>应收款统计</span>
+                            </div>
+                            <div class="mainGo" data-id="9">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>优惠金额</span>
+                            </div>
+                            <div class="mainGo" data-id="10">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>客户数据</span>
+                            </div>
+                            <div class="mainGo" data-id="11">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>月度利润</span>
+                            </div>
+                            <div class="mainGo" data-id="12">
+                                <span class="iconfont icon-shoukuan"></span>
+                                <span>临时商品</span>
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_center">
+            <div class="noflex che_display">
+                <span class="iconfont icon-YYJYKSZHTJ"></span>
+                <span>接车</span>
+            </div>
+        </div>
+        <div class="che_footer">
+            <div class="footer_head che_display">
+                <div class="footer_mains che_display che_color" data-id="1">
+                    <span class="iconfont  icon-gongzuotai1"></span>
+                    <span>工作台</span>
+                </div>
+                <div class="footer_mains che_display" data-id="2">
+                    <span class="iconfont icon-yanjing"></span>
+                    <span>发现</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./lib/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/js/template.js"></script>
+<script src="./js/rem.js"></script>
+<script src="./js/common.js?v=1.2.2"></script>
+<script src="./js/index.js"></script>
+<script type="text/html" id="tpl">
+    {{each list as v i}}
+    <div class="mainGo" data-id="{{i+1}}">
+        <span class="{{v.icon}}"></span>
+        <span>{{v.title}}</span>
+    </div>
+
+    {{/each}}
+</script>
+</html>

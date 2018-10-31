@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/find/breakdown.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" >
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>故障提醒</h4>
+        </div>
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="volist hiden">
+            <div class="volist_nomode">
+                <div class="volist_bgimg che_display">
+                    <div class="backImg"></div>
+                    <div>暂无故障</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+                    <div class="break_header" >
+                        <div class="che_display header_one">
+                            <div>
+                                <span>用户名</span>
+                                <input type="text" class="user_name">
+                            </div>
+                            <div>
+                                <span>车牌</span>
+                                <input type="text" class="car_cline">
+                            </div>
+                        </div>
+                        <div class="che_display header_two">
+                            <div>
+                                <span>OBD id</span>
+                                <input type="text" class="input_id">
+                            </div>
+                            <button class="break_button">查找</button>
+                        </div>
+                    </div>
+                    <div class="break_main">
+                        <div class="main_one">
+                            <div class="break_sons che_display" >
+                                <span>用户名</span>
+                                <span>手机号</span>
+                                <span>车牌号</span>
+                                <span>故障码</span>
+                                <span>OBD Id</span>
+                                <span>故障说明</span>
+                                <span>故障时间</span> 
+                                <span>操作</span>
+                            </div>
+                            <div class="break_twins">
+                                <!-- <div class="twinsSons che_display">
+                                    <span>王世波</span>
+                                    <span>18838197524</span>
+                                    <span>沪A89212</span>
+                                    <span>CDIS</span>
+                                    <span class="show_dots">生活的事等哈就多喝水打卡涉及贷款</span>
+                                    <span>2018-11-44</span>
+                                    <span>已处理</span>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pages shitsOne">
+                        <div class="che_display page_main">
+                            <span class="mui-icon mui-icon-arrowleft" data-id="1"></span>
+                            <div class="page_pages onePage che_display" data-id="1">
+                                <span class="page_color page_son">1</span>
+                            </div>
+                            <span class="mui-icon mui-icon-arrowright" data-id="1"></span>
+                            <div class="page_input che_display">
+                                <span>到第</span>
+                                <input type="text" value="1" class="pagesNum onePagenum">
+                                <span>页</span>
+                                <button class="btns" data-id="1">确定</button>
+                            </div>
+                            <div class="page_alls">
+                                <span>共</span>
+                                <span class="page_twoNum">0</span>
+                                <span>条</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../js/common.js"></script>
+<!-- <script src="../js/find/commission.js"></script> -->
+<script src="../js/find/breakdown.js"></script>
+<script type="text/html" id="tpl">
+    {{each data as v i }}
+    <div class="twinsSons che_display">
+        <span class="show_dots">{{v.user_name}}</span>
+        <span class="show_dots">{{v.phone}}</span>
+        <span class="show_dots">{{v.cart_licens}}</span>
+        <span class="show_dots">{{v.alarm_code}}</span>
+        <span class="show_dots">{{v.obd_id}}</span>
+        {{if v.code_name}}
+        <span class="show_dots">{{v.code_name}}</span>
+        {{else}}
+        <span class="show_dots">暂无说明</span>
+        {{/if}}        
+        <span class="show_dots">{{v.create_time.split(' ')[0]}}</span>
+        <span><span class="overThis" data-id="{{v.trouble_id}}">处理</span></span>
+    </div>
+    {{/each}}
+</script>
+
+</html>

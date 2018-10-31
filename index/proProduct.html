@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/billing.css">
+    <link rel="stylesheet" href="../css/index/payProduct.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>支付详情</h4>
+        </div>
+        <div class="loading hiden" style="display: none;">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+
+                    <div class="tosuit_main">
+                        <!-- <div class="tosuit_top">
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">车牌:</span>
+                                        <input type="text" class="tosuit_num" value="{{data.cartList.cart_licens}}" disabled>
+                                    </div>
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">车主:</span>
+                                        <input type="text" class="tosuit_num" value="{{data.connect_people}}" disabled>
+                            
+                                    </div>
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">电话:</span>
+                                        <input type="text" class="tosuit_num" value="{{data.connect_phone}}" disabled>
+                                    </div>
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">订单号:</span>
+                                        <input type="text" class="tosuit_num" value="{{data.ordersn}}" disabled>
+                                    </div>
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">订单总价:</span>
+                                        <input type="text" class="tosuit_num" value="{{data.totalprice}}" disabled>
+                                    </div>
+                                    <div class="pay_content che_display">
+                                        <span class="tosuit_pai">支付方式:</span>
+                                        <div class="che_display pay_sons">
+                                            <div class="payStyle" data-id="1">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>微信</span>
+                                            </div>
+                                            <div class="payStyle" data-id="2">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>支付宝</span>
+                                            </div>
+                                            <div class="payStyle" data-id="3">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>现金</span>
+                                            </div>
+                                            <div class="payStyle" data-id="4">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>银行卡</span>
+                                            </div>
+                                            <div class="payStyle" data-id="5">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>挂账</span>
+                                            </div>
+                                            <div class="payStyle" data-id="6">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>会员卡</span>
+                                            </div>
+                                            <div class="payStyle" data-id="7">
+                                                <span class="iconfont icon-wancheng"></span>
+                                                <span>其他</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="fuck_pay hiden">
+                                            <div class="pay_vip che_display ">
+                                                <span class="tosuit_pai">选择会员卡:</span>
+                                                <div class="che_display payVip_name">
+                                                    <div>
+                                                        <span class="iconfont icon-wancheng"></span>
+                                                        <span>
+                                                            <span>姓名</span>
+                                                            <span>金额: </span>
+                                                            <span>折扣:</span>
+                                                        </span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="iconfont icon-wancheng"></span>
+                                                        <span>
+                                                            <span>姓名</span>
+                                                            <span>金额: </span>
+                                                            <span>折扣:</span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="moneys che_display">
+                                                    <div class="pay_vip che_display ">
+                                                        <span class="tosuit_pai">扣卡金额:</span>
+                                                        <span class="tosuit_pai"></span>
+                                                    </div>
+                                                    <div class="pay_vip che_display ">
+                                                        <span class="tosuit_pai">会员卡余额:</span>
+                                                        <span class="tosuit_pai"></span>
+                                                    </div>
+                                                    <div class="pay_vip tixing che_display">
+                                                        <span class="tosuit_pai">余额不足</span>
+                                                    </div>
+                                            </div>
+
+                                    </div>
+                                    <div class="tosuit_content che_display">
+                                        <span class="tosuit_pai">优惠:</span>
+                                        <input type="text" class="tosuit_num" value="" id="pay_youhui">
+                                        <span class="practical">实际支付:<em class="ems"></em>元</span>
+                                    </div>
+                                    <div class=" che_display" id="beizhu">
+                                        <span class="tosuit_pai">结算备注:</span>
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </div>
+                            </div>
+                            <div class="billing_boxs">
+                                <div class="tosuit_top">
+                                    <div class="billing_main">
+                                        <div class="tosuit_content che_display billing_one" >
+                                            <span class="tosuit_pai">商品名称</span>
+                                        </div>
+                                        <div class="billing_two billing_fuwu">
+                        
+                                                <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                                                    <div class="twoName che_display">
+                                                        <div class="twoName_names">
+                                                            <span>名称:</span>
+                                                            <span class="che_acolor">{{v.goods_name}}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="twoName che_display">
+                                                        <div class="twoName_names">
+                                                            <span>价格:</span>
+                                                            <span class="che_acolor">￥<span class="billing_money">{{v.real_price}}</span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="twoName che_display">
+                                                        <div class="twoName_names">
+                                                            <span>数量:</span>
+                                                            <span class="che_acolor"><span class="billing_money">{{v.goods_num}}</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="billing_main">
+                                        <div class="tosuit_content che_display billing_one" data-id="2">
+                                            <span class="tosuit_pai">订单处理</span>
+                                        </div>
+                                        <div class="billing_two billing_fuwu">
+                                            <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                                                    <div class=" che_display twoMan">
+                                                        <span class="billing_pick">接单人:</span>
+                                                        <div class="che_display pickName">
+                                                            <span class="che_acolor">{{v.seller_account}}</span>
+                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class=" che_display twoMan">
+                                                        <span class="billing_pick">领料人:</span>
+                                                        <div class="che_display pickName">
+                                                            <span class="che_acolor">{{v.seller_account}}</span>
+                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class=" che_display twoMan">
+                                                        <span class="billing_pick">施工人:</span>
+                                                        <div class="che_display pickName">
+                                                            <span class="che_acolor">{{v.seller_account}}</span>
+                                            
+                                                        </div>
+                                                    </div>
+                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!-- <div class="reception_footer jiedan">
+                                <div class="reception_message">
+                                    提交
+                                </div>
+                            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/proProduct.js"></script>
+<script type="text/html" id="tpl">
+    <div class="tosuit_top">
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">车牌:</span>
+                <input type="text" class="tosuit_num" value="{{data.cartList.cart_licens}}" disabled>
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">车主:</span>
+                <!-- <span class="tosuit_num">136465656265</span> -->
+                <input type="text" class="tosuit_num" value="{{data.connect_people}}" disabled>
+    
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">电话:</span>
+                <input type="text" class="tosuit_num" value="{{data.connect_phone}}" disabled>
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">订单号:</span>
+                <input type="text" class="tosuit_num" value="{{data.ordersn}}" disabled>
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">订单总价:</span>
+                <input type="text" class="tosuit_num" value="{{data.totalprice}}" disabled>
+            </div>
+            <div class="pay_content che_display">
+                <span class="tosuit_pai">支付方式:</span>
+                <div class="che_display pay_sons">
+                    <div class="payStyle" data-id="1">
+                        <span class="iconfont icon-wancheng pay_color"></span>
+                        <span>微信</span>
+                    </div>
+                    <div class="payStyle" data-id="2">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>支付宝</span>
+                    </div>
+                    <div class="payStyle" data-id="3">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>现金</span>
+                    </div>
+                    <div class="payStyle" data-id="4">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>银行卡</span>
+                    </div>
+                    <div class="payStyle" data-id="5">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>挂账</span>
+                    </div>
+                    <div class="payStyle" data-id="8">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>会员卡</span>
+                    </div>
+                    <div class="payStyle" data-id="7">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>其他</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 父盒子隐藏 -->
+            <div class="fuck_pay hiden">
+                <div class="pay_vip che_display ">
+                    <span class="tosuit_pai">选择会员卡:</span>
+                    <div class="che_display payVip_name">
+                        
+                        <div class="cli_pay">
+                            <span>
+                                <span>您没有会员卡</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="moneys che_display">
+                        <div class="pay_vip che_display ">
+                            <span class="tosuit_pai">扣卡金额:</span>
+                            <span class="tosuit_pai koukaMoney"></span>
+                        </div>
+                        <div class="pay_vip che_display ">
+                            <span class="tosuit_pai">会员卡余额:</span>
+                            <span class="tosuit_pai vipMoney"></span>
+                        </div>
+                        <div class="pay_vip tixing che_display">
+                            <span class="tosuit_pai">余额不足</span>
+                        </div>
+                </div>
+            </div>
+            <div class=" che_display qita" id="beizhu">
+                <span class="tosuit_pai qiyatext">请填写:</span>
+                <textarea class="qitaConter" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="tosuit_content che_display coupon">
+                <div class="coupon_style che_display">
+                    <span class="tosuit_pai">优惠方式:</span>
+                    <div class="che_display coupon_this kkks" data-id="a">
+                        <span class="iconfont icon-wancheng coupon_color "></span>
+                        <span>手动填写</span>
+                    </div>
+                    <div class="che_display coupon_this" data-id="b">
+                        <span class="iconfont icon-wancheng"></span>
+                        <span>抵用券折扣</span>
+                    </div>
+                </div>
+                <div class="coupon_main ">
+                    <div class="che_display reduced">
+                        <span class="tosuit_pai reduced_one">优惠:</span>
+                        <div class="coupon_list hiden">
+                            <div class="coupon_one che_display">
+                                <span class="che_text_spac">无抵用券可用</span>
+                            </div>
+                        </div>
+
+                        <input type="number" class="tosuit_num " value="" id="pay_youhui" >
+                    </div>
+                </div>
+
+
+                <span class="practical">实际支付:&nbsp;<em class="ems">{{data.totalprice}}</em>元</span>
+            </div>
+            <!-- 挂账 -->
+            
+            <div class="buyers hiden">
+                <div class="tosuit_content che_display">
+                    <span class="tosuit_pai">现付:</span>
+                    <input type="number" class="tosuit_num" value="0" id="pay_buy">
+                    <span class="tosuit_pai">今日挂账:</span>
+                    <input type="number" class="tosuit_num" value="{{data.totalprice}}" id="pay_today" readonly>
+                </div>
+                <div class="buy_main che_display">
+                    <span>支付方式:</span>
+                    <div class="buyer_secend che_display">
+                        <div class="buy_one che_display" data-buyid="1">
+                            <span class="iconfont icon-wancheng buyer_color"></span>
+                            <span>微信</span>
+                        </div>
+                        <div class="buy_one che_display" data-buyid="2">
+                            <span class="iconfont icon-wancheng"></span>
+                            <span>支付宝</span>
+                        </div>
+                        <div class="buy_one che_display" data-buyid="3">
+                            <span class="iconfont icon-wancheng"></span>
+                            <span>现金</span>
+                        </div> 
+                        <div class="buy_one che_display" data-buyid="4">
+                            <span class="iconfont icon-wancheng"></span>
+                            <span>银行卡</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" che_display" id="beizhu">
+                <span class="tosuit_pai">结算备注:</span>
+                <textarea name="" id="remark" cols="30" rows="10"></textarea>
+            </div>
+    </div>
+    <div class="billing_boxs">
+        <div class="tosuit_top">
+            <div class="billing_main">
+                <div class="tosuit_content che_display billing_one" >
+                    <span class="tosuit_pai">商品名称</span>
+                    <!-- <span class="picking_btn" data-id="1">添加</span> -->
+                </div>
+                <div class="billing_two billing_fuwu">
+                        {{each data.goodsList as v i}}
+
+                        <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                            <div class="twoName che_display">
+                                <div class="twoName_names che_display">
+                                    <span>名称:</span>
+                                    <span class="che_acolor">{{v.goods_name}}</span>
+                                </div>
+                            </div>
+                            <div class="twoName che_display">
+                                <div class="twoName_names">
+                                    <span>价格:</span>
+                                    <span class="che_acolor">￥<span class="billing_money">{{v.sellings_price}}</span></span>
+                                </div>
+                            </div>
+                            <div class="twoName che_display">
+                                <div class="twoName_names">
+                                    <span>数量:</span>
+                                    <span class="che_acolor"><span class="billing_money">{{v.goods_num}}</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                </div>
+            </div>
+            {{if data.sellerList.length>0}}
+            <div class="billing_main">
+                <div class="tosuit_content che_display billing_one" data-id="2">
+                    <span class="tosuit_pai">订单处理</span>
+                </div>
+                <div class="billing_two billing_fuwu">
+                    <div class="twoHeader" data-id={{goods_id}} data-pageid={{i}}>
+                        {{each data.sellerList as v i}}
+                            {{if v.type==1}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">接单人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{else if  v.type==2}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">领料人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{else if  v.type==3}}
+                            <div class=" che_display twoMan">
+                                <span class="billing_pick">施工人:</span>
+                                <div class="che_display pickName">
+                                    <span class="che_acolor">{{v.seller_account}}</span>
+                    
+                                </div>
+                            </div>
+                            {{/if}}
+
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+    <div class="reception_footer jiedan">
+        <div class="reception_message fuckyou">
+            提交
+        </div>
+    </div>
+</script>
+
+
+<script type="text/html" id="tpls">
+
+    {{each data as v i}}
+        <div class="cli_pay cli_shit" data-money="{{v.balance}}" data-yes={{v.discount}} data-id="{{v.club_id}}">
+            <span class="iconfont icon-wancheng cli_font"></span>
+            <span>
+                <span>姓名{{v.user_name}}</span>
+                <span>金额:{{v.balance}} </span>
+                <span>折扣:{{v.discount}}</span>
+            </span>
+        </div>
+    {{/each}}
+</script>
+<script type="text/html" id="couponTpl">
+
+    {{each data as v i}}
+        {{if v.is_usable==1}}
+        <div class="coupon_one che_display" data-couponprice={{v.rec_money}}>
+            <span class="iconfont icon-wancheng " data-couponid="{{v.rec_id}}"></span>
+            <span>抵用券可抵用金额:{{v.rec_money}}</span>
+        </div>
+        {{else}}
+        <div class="coupon_two che_display" data-couponprice={{v.rec_money}}>
+            <span class="iconfont icon-wancheng " data-couponid="{{v.rec_id}}"></span>
+            <span>抵用券可抵用金额:{{v.rec_money}}</span>
+        </div>
+
+        {{/if}}
+    {{/each}}
+</script>
+
+
+</html>

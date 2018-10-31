@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+html,
+body {
+  margin: 0 auto;
+  height: 100%;
+  background-color: #fff;
+}
+
+.pay_right {
+  float: right;
+}
+.pay_left {
+  float: left;
+}
+
+.che_container {
+  width: 100%;
+  height: 100%;
+  min-width: 18.75rem;
+  margin: 0 auto;
+  position: relative;    
+  overflow: hidden;
+}
+.che_display{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+img{
+  width:100%;
+  height:100%;
+}
+/* 修改mui样式 */
+input[type=password],input[type=text]{
+  line-height: 1.05rem;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  padding:.5rem 0 .5rem 1.25rem;
+  -webkit-user-select: text;
+  border:none;
+  border-bottom: 1px solid #cdd1d4;
+  border-radius: 0;
+  outline: 0;
+  background-color: #fff;
+  font-size: .7rem;
+}
+input[type=text]{
+  border-bottom:1px solid #ea5504;
+}
+input::-webkit-input-placeholder{
+　　　　　color:red;
+}
+/* 修改mui.alert样式 */
+.mui-popup{
+  width: 10.5rem
+}
+.mui-popup-button.mui-popup-button-bold {
+  font-weight: 400;
+}
+
+/* 登录页面 */
+.che_main{
+  margin-top: 4.75rem;
+}
+.che_img{
+  justify-content: center;
+
+}
+.che_img>img{
+  height: 4.75rem;
+  width: 4.75rem;
+}
+
+.che_input{
+  margin-top: 2.25rem;
+  flex-direction: column;
+  align-items: center;
+}
+.che_input div{
+  width: 13.5rem;
+  position: relative;
+
+}
+.che_input div .che_tubiao{
+  position: absolute;
+  top: .45rem;
+  left: 0px;
+  font-size: .9rem;
+  color: #bec3c8;
+}
+
+
+/* 底部 */
+.che_footer{
+  margin-top:2rem;
+  justify-content: center;
+}
+.che_footer .loginBtn{
+  height: 2.5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  width: 13.75rem;
+  border-radius: .25rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #ff8417 , #ea5504);
+  background: linear-gradient(left,#ff8417, #ea5504);
+}
+/* 新底部 */
+
+.che_login{
+  margin-top: 2rem;
+  justify-content: center;
+}
+.che_login .loginBtn{
+  height: 2.5rem;
+  /* line-height: 2.5rem; */
+  border: none;
+  color: #fff;
+  width: 13.75rem;
+  border-radius: .25rem;
+  text-align: center;
+  background: -webkit-linear-gradient(left, #ff8417 , #ea5504);
+  background: linear-gradient(left,#ff8417, #ea5504);
+}

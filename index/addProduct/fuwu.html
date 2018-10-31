@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index/shangpin/commodity.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>服务商品</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="loading hiden">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        <div class="che_main hiden">
+
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+                    <div class="incar_head">
+                        <input type="text" placeholder="输入商品名称" class="search">
+                        <!-- <div class="vince">
+                            <span class="shanghai">沪</span>
+                            <span class="mui-icon mui-icon-search icon_search"></span>
+                        </div> -->
+                    </div>
+                    <div class="commod_mains">
+
+                    </div>
+                    <div class="commodity_main">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="che_footer hiden">
+            <!-- <div class="commodity_footer">
+                <div class="addCommod">
+                    添加
+                </div>
+            </div> -->
+            <div class=" footer_kou ">
+                <!-- <div class="reception_footer jiedan">
+                    <div class="reception_message">
+                        新增
+                    </div>
+                </div> -->
+                <div class="reception_footer addCommod" style="width: 100%">
+                    <div class="reception_message ">
+                        添加
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/js/jquery.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/index/addProduct/fuwu.js"></script>
+<script type="text/html" id="tpl">
+    {{each data as v i }}
+        <div class="commodity_main">
+            <div class="commodity_header">
+                <div class="commodity_one che_display clicks">
+                    <div> 
+                        <span>名称:</span>
+                        <input type="text" class="comm_name" value="{{v.goods_name}}" readonly>
+                    </div>
+                    <span class="iconfont icon-xuanze" data-id="{{v.goods_id}}"></span>
+                </div>
+                <div class="commodity_one che_display">
+                    <div>
+                        <span>价格:</span>
+                        <input type="number" class="comm_price" placeholder="请输入商品价格">
+                    </div>
+
+                </div>
+                <!-- <div class="commodity_one che_display">
+                    <div class="examine che_display">
+                        <span>检查结果:</span>
+                        <span class='examine_bgc'></span>
+                    </div>
+
+                </div> -->
+            </div>
+            <div class="commodity_aside hiden">
+                <div class="singlePerson oneNum_people">
+                    <div class="commodity_one commodity_two che_display">
+                        <span>接单人</span>
+                        <!-- <span class="picking_btn">添加</span> -->
+                    </div>
+                </div>
+                <div class="picking">
+                    <div class="commodity_one commodity_two che_display">
+                        <span>领料人</span>
+                        <span class="picking_btn">添加</span>
+                    </div>
+                </div>
+                <div class="constructor">
+                    <div class="commodity_one commodity_two che_display">
+                        <span>施工人</span>
+                        <span class="picking_btn">添加</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    {{/each}}
+</script>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/css/mui.picker.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/yingye/today.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>临时支出</h4>
+        </div>
+        <div class="loading hiden">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <div class="drive_main">
+                        <div class="eachres">
+                            <!-- <div id="main" style="width: 646px;height:436px;"> -->
+                            <div class="chart" id="breakChart"></div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="searchs">
+                        <div class="day_search che_display">
+                            <div class="search_fa">
+                                <input type="text" class="day_start" placeholder="yyyy-MM-dd" readonly>
+                                <span>--</span>
+                                <input type="text" class="day_end" placeholder="yyyy-MM-dd" readonly>
+                            </div>
+                            <button class="go_search">查找</button>
+                        </div>
+                    </div>
+                    <div class="today_all">
+                        <span>总计:</span>
+                        <span><em class="all_dayPrice">952.1</em>元</span>
+                    </div>
+                    <div class="today_main">
+                        <div class="day_title che_display">
+                            <span>时间</span>
+                            <span>总价</span>
+                        </div>
+                        <div class="day_mains">
+                            <div class="che_display titleSons">
+                                <span>2018-07-12</span>
+                                <span>579.00</span>
+                            </div>
+                        </div>
+                        <div class="pages">
+                            <div class="che_display page_main">
+                                <span class="mui-icon mui-icon-arrowleft"></span>
+                                <div class="page_pages che_display">
+                                    <span class="page_color page_son">1</span>
+                                    <span class="page_son">2</span>
+                                    <span class="page_son">3</span>
+                                    <span class="page_son">4</span>
+                                    <span class="page_son">5</span>
+                                </div>
+                                <span class="mui-icon mui-icon-arrowright"></span>
+                                <div class="page_input che_display">
+                                    <span>到第</span>
+                                    <input type="text" value="1" class="pagesNum">
+                                    <span>页</span>
+                                    <button class="btns">确定</button>
+                                </div>
+                                <div class="page_alls">
+                                    <span>共</span>
+                                    <span class="page_num">39</span>
+                                    <span>条</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/js/jquery.min.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../lib/js/mui.picker.min.1.js"></script>
+<script src="../../lib/js/echarts.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/yingye.js"></script>
+<script src="../../js/index/yingye/zero.js"></script>
+<script type="text/html" id="tpl">
+    {{if data.length>0 }}
+        {{each data as v i}}
+            <div class="che_display titleSons">
+                <span>{{v.c_time}}</span>
+                <span>{{v.allPrice}}</span>
+            </div>
+        {{/each}}
+    {{else}}
+        <!-- <div class="che_display noHave">
+            <span>暂无数据</span>
+        </div> -->
+    {{/if}}
+</script>
+</html>

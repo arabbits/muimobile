@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/billing.css">
+    
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>开单</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="che_main">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+
+                    <div class="tosuit_main">
+                        <div class="tosuit_top">
+                            <div class="tosuit_content che_display">
+                                <span class="tosuit_pai">车牌:</span>
+                                <input type="text" class="tosuit_num" placeholder="" disabled>
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <span class="tosuit_pai">车主:</span>
+                                <!-- <span class="tosuit_num">136465656265</span> -->
+                                <input type="text" maxlength="8" class="tosuit_num user_Carname" placeholder="">
+
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <span class="tosuit_pai">电话:</span>
+                                <input type="text" class="tosuit_num" placeholder="" disabled>
+                            </div>
+                        </div>
+                        <div class="billing_boxs">
+                            <div class="tosuit_top">
+                                <div class="billing_main">
+                                    <div class="tosuit_content che_display billing_one" >
+                                        <span class="tosuit_pai">服务商品</span>
+                                        <span class="picking_btn" data-id="1">添加</span>
+                                    </div>
+                                    <div class="billing_two billing_fuwu">
+                                        <!-- <div class="twoHeader">
+                                            <div class="twoName che_display">
+                                                <div class="twoName_names">
+                                                    <span>名称:</span>
+                                                    <span class="che_acolor">机油</span>
+                                                </div>
+                                                <span class="iconfont icon-shanchu1 che_acolor"></span>
+                                            </div>
+                                            <div class="twoName che_display">
+                                                <div class="twoName_names">
+                                                    <span>价格:</span>
+                                                    <span class="che_acolor">￥1000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="twoHeader">
+                                            <div class="twoName che_display">
+                                                <div class="twoName_names">
+                                                    <span>名称:</span>
+                                                    <span class="che_acolor">机油</span>
+                                                </div>
+                                                <span class="iconfont icon-shanchu1 che_acolor"></span>
+                                            </div>
+                                            <div class="twoName che_display">
+                                                <div class="twoName_names">
+                                                    <span>价格:</span>
+                                                    <span class="che_acolor">￥1000</span>
+                                                </div>
+                                            </div>
+                                            <div class="twoName che_display twoMan">
+                                                <span class="billing_pick">领料人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">张三</span>
+                                                    <span class="che_acolor">张三</span>
+                                                    <span class="che_acolor">张三</span>
+    
+                                                </div>
+                                            </div>
+                                            <div class="twoName che_display twoMan">
+                                                <span class="billing_pick">领料人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">张三</span>
+                                                    <span class="che_acolor">张三</span>
+                                                    <span class="che_acolor">张三</span>
+    
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="billing_main">
+                                    <div class="tosuit_content che_display billing_one" data-id="2">
+                                        <span class="tosuit_pai">实体商品</span>
+                                        <span class="picking_btn" data-id="2">添加</span>
+                                    </div>
+                                    <div class="billing_two billing_pages">
+
+                                    </div>
+                                </div>
+                                <div class="billing_main">
+                                    <div class="tosuit_content che_display billing_one" data-id="3">
+                                        <span class="tosuit_pai">临时商品</span>
+                                        <span class="picking_btn" data-id="3">添加</span>
+                                    </div>
+                                    <div class="billing_two billing_linshi">
+
+                                    </div>
+                                </div>
+                                <!-- // 合计价格 -->
+                                <div class="billing_main">
+                                    <div class="billing_allNum tosuit_content che_display">
+                                        <span>合计 :</span>
+                                        <span class="billing_allPrice">￥1411</span>
+                                    </div>
+                                </div>
+                                <div class="billing_main shitfuck che_display">
+                                    <span class="shitBei">备注</span>
+                                    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div class="billing_footer" >
+                                <div class="addCommod">完成</div>
+                            </div>
+                            <!-- 点击完成时将html给这个 -->
+                            <!-- <div class="over_order che_display">
+                                <div class="over_open">开单 <span class="iconfont icon-xuanze1"></span></div>
+                                <div class="over_show">
+                                    <div class="over_product">
+                                        <div class="overOne_product">
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display over_name">
+                                                <span>技师 :</span>
+                                                <div class="allName che_display">
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="over_product">
+                                        <div class="overOne_product">
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display over_name">
+                                                <span>技师 :</span>
+                                                <div class="allName che_display">
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="over_order che_display">
+                                <div class="over_open">开单 <span class="iconfont icon-xuanze1"></span></div>
+                                <div class="over_show">
+                                    <div class="over_product">
+                                        <div class="overOne_product">
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display over_name">
+                                                <span>技师 :</span>
+                                                <div class="allName che_display">
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="over_product">
+                                        <div class="overOne_product">
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display">
+                                                <span>这是商品</span>
+                                                <span>x 1</span>
+                                            </div>
+                                            <div class="che_display over_name">
+                                                <span>技师 :</span>
+                                                <div class="allName che_display">
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+                                                    <span>张三</span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/billing.js"></script>
+<script type="text/html" id="tpl">
+    {{each commObj as v i}}
+    <div class="twoHeader" data-id={{v.goods_id}} data-pageid={{i}}>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>名称:</span>
+                <span class="che_acolor show_dots">{{v.goods_name}}</span>
+            </div>
+            <span class="iconfont icon-shanchu1 che_acolor"></span>
+        </div>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>价格:</span>
+                <span class="che_acolor">￥<span class="billing_money allPirce">{{v.selling_price}}</span></span>
+            </div>
+        </div>
+        {{if v.name.length>0 }}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">开单人:</span>
+            <div class="che_display pickName">
+                {{each v.name as i f}}
+                <span class="che_acolor">{{v.name[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+        {{if v.lingliao.length>0}}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">领料人:</span>
+            <div class="che_display pickName">
+                {{each v.lingliao as i f}}
+                <span class="che_acolor billing_money">{{v.lingliao[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+        {{if v.shigong.length>0 }}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">施工人:</span>
+            <div class="che_display pickName">
+                {{each v.shigong as i f}}
+                <span class="che_acolor billing_money">{{v.shigong[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="tplpage">
+    {{each pageArray as v i}}
+    <div class="twoHeader" data-id={{v.goods_id}} data-pageid={{i}}>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>名称:</span>
+                <span class="che_acolor">{{v.goods_name}}</span>
+            </div>
+            <span class="iconfont icon-shanchu1 che_acolor"></span>
+        </div>
+        {{if v.price!==''}}
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>价格:</span>
+                <span class="che_acolor">￥<span class="billing_money">{{v.price}}</span></span>
+            </div>
+        </div>
+        {{/if}}
+        <div class="twoName hiden">
+            <div class="twoName_names">
+                <span>价格:</span>
+                <span class="che_acolor">￥<span class="billing_money allPirce">{{v.orderprice*v.type_num}}</span></span>
+            </div>
+        </div>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>数量:</span>
+                <span class="che_acolor">{{v.type_num}}</span>
+            </div>
+        </div>
+        {{if v.brand!==''}}
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>品牌:</span>
+                <span class="che_acolor">{{v.brand}}</span>
+            </div>
+        </div>
+        {{/if}}
+        {{if v.model!==''}}
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>型号:</span>
+                <span class="che_acolor">{{v.model}}</span>
+            </div>
+        </div>
+        {{/if}}
+        {{if v.apecification!==''}}
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>规格:</span>
+                <span class="che_acolor">{{v.apecification}}</span>
+            </div>
+        </div>
+        {{/if}}
+        {{if v.unit!==''}}
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>单位:</span>
+                <span class="che_acolor">{{v.unit}}</span>
+            </div>
+        </div>
+        {{/if}}
+        {{if v.kaidan.length>0 }}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">开单人:</span>
+            <div class="che_display pickName">
+                {{each v.kaidan as i f}}
+                <span class="che_acolor billing_money">{{v.kaidan[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+        {{if v.lingliao.length>0 }}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">领料人:</span>
+            <div class="che_display pickName">
+                {{each v.lingliao as i f}}
+                <span class="che_acolor billing_money">{{v.lingliao[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+        {{if v.shigong.length>0 }}
+        <div class=" che_display twoMan">
+            <span class="billing_pick">施工人:</span>
+            <div class="che_display pickName">
+                {{each v.shigong as i f}}
+                <span class="che_acolor billing_money">{{v.shigong[f]}}</span>
+                {{/each}}
+
+            </div>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="tpls">
+    {{each linshiArr as v i}}
+    <div class="twoHeader" data-id={{i}}  data-pageid={{v.goods_name}}>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>名称:</span>
+                <span class="che_acolor ">{{v.goods_name}}</span>
+            </div>
+            <span class="iconfont icon-shanchu1 che_acolor"></span>
+        </div>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>价格:</span>
+                <span class="che_acolor ">￥<span class="billing_money">{{v.selling_price}}</span></span>
+            </div>
+        </div>
+        <div class="twoName hiden">
+            <div class="twoName_names">
+                <span>价格:</span>
+                <span class="che_acolor">￥<span class="billing_money allPirce">{{v.selling_price*v.shopNum}}</span></span>
+            </div>
+        </div>
+        <div class="twoName che_display">
+            <div class="twoName_names">
+                <span>数量:</span>
+                <span class="che_acolor">{{v.shopNum}}</span>
+            </div>
+        </div>
+        {{if v.goods_info!= ""}}
+        <div class=" che_display twoMan billing_product">
+            <span class="billing_pick" >详情:</span>
+            <div class="che_display pickName">
+                <span class="che_acolor ">{{v.goods_info}}</span>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+    {{/each}}
+</script>
+</html>

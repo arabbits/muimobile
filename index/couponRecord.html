@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/couponRecord.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="../index.html">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>扣卡记录</h4>
+        </div>
+        <div class="loading hiden" style="display: none;">
+                <img src="../img/loading.gif" alt="">
+            </div>
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                        <!-- <div class="reception_navs">
+                        </div> -->
+                        <div class="reception_coupon">
+                            <div class="list_coupon">卡券列表</div>
+                            <div class="record_main">
+                                <div class="record_frist">
+                                    <div class="recard_one che_display">
+                                        <div class="che_display">
+                                            <span>卡券名称:</span>
+                                            <span>清洗三元催化器券</span>
+                                        </div>
+                                        <div class="che_display">
+                                            <span>使用次数:</span>
+                                            <span>卡券名称</span>
+                                        </div>
+                                    </div>
+                                    <div class="recard_one che_display">
+                                        <div class="che_display">
+                                            <span>是否有效:</span>
+                                            <span>的点点滴滴</span>
+                                        </div>
+                                        <div class="che_display">
+                                            <span>时间:</span>
+                                            <span>2018-15-22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="record_frist">
+                                    <div class="recard_one che_display">
+                                        <div class="che_display">
+                                            <span>卡券名称:</span>
+                                            <span>清洗三元催化器券</span>
+                                        </div>
+                                        <div class="che_display">
+                                            <span>使用次数:</span>
+                                            <span>卡券名称</span>
+                                        </div>
+                                    </div>
+                                    <div class="recard_one che_display">
+                                        <div class="che_display">
+                                            <span>是否有效:</span>
+                                            <span>的点点滴滴</span>
+                                        </div>
+                                        <div class="che_display">
+                                            <span>时间:</span>
+                                            <span>2018-15-22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="reception_footer kouka hiden" >
+                            <div class="reception_message">
+                                扣卡
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/couponRecord.js"></script>
+<script type="text/html" id="tpl">
+    <div class="reception_header che_display">
+        <div class="rechead_img">
+            <img src="{{data.userInfo.avatar}}" alt="">
+        </div>
+        <div class="rechead_main che_display">
+            <span class="carName">{{data.cartInfo.cart_licens}}</span>
+            <span>{{data.cartInfo.type_name}}</span>
+        </div>
+    </div>
+    <div class="reception_nav">
+        <div class="recenav_top che_display">
+            <span>客户</span>
+            <span class="carMan">{{data.userInfo.user_name}}</span>
+        </div>
+        <div class="recenav_top che_display">
+            <span>手机</span>
+            <span class="nav_iphone">{{data.userInfo.phone}}</span>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tplRecord">
+    {{each data as v i}}
+        <div class="record_frist">
+                <div class="recard_one che_display">
+                    <div class="che_display">
+                        <span>姓名:</span>
+                        <span>{{v.user_name}}</span>
+                    </div>
+                    <div class="che_display">
+                        <span>手机号码:</span>
+                        <span>{{v.phone}}</span>
+                    </div>
+                </div>
+            <div class="recard_one che_display">
+                <div class="che_display">
+                    <span>卡券名称:</span>
+                    <span>{{v.card_name}}</span>
+                </div>
+                <div class="che_display">
+                    <span>使用次数:</span>
+                    <span>{{v.use_num}}</span>
+                </div>
+            </div>
+            <div class="recard_one che_display">
+                <div class="che_display">
+                    <span>是否有效:</span>
+                    {{if v.is_valid == 1}}
+                    <span>有效</span>
+                    {{else if v.is_valid == 2}}
+                    <span>无效</span>
+                    
+                    {{/if}}
+                </div>
+                <div class="che_display">
+                    <span>时间:</span>
+                    <span>{{v.add_time}}</span>
+                </div>
+            </div>
+        </div>
+        
+
+
+    {{/each}}
+</script>
+
+</html>

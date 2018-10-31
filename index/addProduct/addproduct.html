@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index/billing.css">
+    <link rel="stylesheet" href="../../css/index/addproduct.css">
+    
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="../carlist.html">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4>加单</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="che_main">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+                    <div class="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/zepto/zepto.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/index/addProduct/addproduct.js"></script>
+<script type="text/html" id="serve">
+    
+    <div class="tosuit_main">
+        <div class="tosuit_top">
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">车牌:</span>
+                <input type="text" class="tosuit_num" value="{{data.cartList.cart_licens}}" placeholder="" disabled>
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">车主:</span>
+                <!-- <span class="tosuit_num">136465656265</span> -->
+                <input type="text" class="tosuit_num" value="{{data.connect_people}}" placeholder="" disabled>
+
+            </div>
+            <div class="tosuit_content che_display">
+                <span class="tosuit_pai">电话:</span>
+                <input type="text" class="tosuit_num" value="{{data.connect_phone}}" placeholder="" disabled>
+            </div>
+        </div>
+        <div class="billing_boxs">
+            <div class="tosuit_top">
+                <div class="billing_main">
+                    <div class="tosuit_content che_display billing_one" >
+                        <span class="tosuit_pai">服务商品</span>
+                        <span class="picking_btn" data-id="1">添加</span>
+                    </div>
+                    <div class="billing_two billing_fuwu">
+                        {{each data.goodsList as v i}}
+                            {{if v.is_virtual==1}}
+                            <div class="twoHeader" data-id={{v.goods_id}} data-pageid={{i}}>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>名称:</span>
+                                        <span class="che_acolor">{{v.goods_name}}</span>
+                                    </div>
+                                    <span class="iconfont icon-shanchu1 che_acolor" data-id="{{v.goods_id}}" data-addid="{{v.id}}"></span>
+                                </div>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>价格:</span>
+                                        <span class="che_acolor">￥<span class="billing_money allPirce">{{v.real_price}}</span></span>
+                                    </div>
+                                </div>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>数量:</span>
+                                        {{if v.goods_num}}
+                                        <span class="che_acolor">{{v.goods_num}}</span>
+                                        {{else}}
+                                            <span class="che_acolor">{{v.shopNum}}</span>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                {{each v.sellerList as j k}}
+                                    {{if j.goods_id==v.goods_id && !!j.seller_account}}
+                                        {{if j.type==1}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">开单人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                        {{if j.type==2}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">领料人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                        {{if j.type==3}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">施工人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/each}}
+                            </div>
+                            
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="billing_main">
+                    <div class="tosuit_content che_display billing_one" data-id="2">
+                        <span class="tosuit_pai">实体商品</span>
+                        <span class="picking_btn" data-id="2">添加</span>
+                    </div>
+                    <div class="billing_two billing_pages">
+                        {{each data.goodsList as v i}}
+                            {{if v.is_virtual==2 && v.goods_id}}
+                            <div class="twoHeader" data-id={{v.goods_id}} data-pageid={{i}}>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>名称:</span>
+                                        <span class="che_acolor">{{v.goods_name}}</span>
+                                    </div>
+                                    <span class="iconfont icon-shanchu1 che_acolor" data-id="{{v.goods_id}}" data-addid="{{v.id}}"></span>
+                                </div>
+                                <div class="twoName">
+                                    <div class="twoName_names">
+                                        <span>价格:</span>
+                                        <span class="che_acolor">￥<span class="billing_money allPirce">{{v.real_price}}</span></span>
+                                    </div>
+                                </div>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>数量:</span>
+                                        {{if v.goods_num}}
+                                            <span class="che_acolor">{{v.goods_num}}</span>
+                                        {{else}}
+                                            <span class="che_acolor">{{v.shopNum}}</span>
+                                        {{/if}}
+
+                                    </div>
+                                </div>
+                                {{each v.sellerList as j k}}
+                                    {{if j.goods_id==v.goods_id  && !!j.seller_account}}
+                                        {{if j.type==1}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">开单人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                        {{if j.type==2}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">领料人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                        {{if j.type==3}}
+                                            <div class=" che_display twoMan">
+                                                <span class="billing_pick">施工人:</span>
+                                                <div class="che_display pickName">
+                                                    <span class="che_acolor">{{j.seller_account}}</span>
+                                                </div>
+                                            </div>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="billing_main">
+                    <div class="tosuit_content che_display billing_one" data-id="3">
+                        <span class="tosuit_pai">临时商品</span>
+                        <span class="picking_btn" data-id="3">添加</span>
+                    </div>
+                    <div class="billing_two billing_linshi">
+                        {{each data.goodsList as v i}}
+                            {{if !v.goods_id}}
+                            <div class="twoHeader" data-id={{i}}  data-pageid={{v.goods_name}}>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>名称:</span>
+                                        <span class="che_acolor">{{v.goods_name}}</span>
+                                    </div>
+                                    <span class="iconfont icon-shanchu1 che_acolor" data-id="{{v.goods_id}}" data-addid="{{v.id}}"></span>
+                                </div>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>价格:</span>
+                                        <span class="che_acolor">￥<span class="billing_money">{{v.real_price}}</span></span>
+                                    </div>
+                                </div>
+                                <div class="twoName che_display">
+                                    <div class="twoName_names">
+                                        <span>数量:</span>
+                                        {{if v.goods_num}}
+                                            <span class="che_acolor">{{v.goods_num}}</span>
+                                        {{else}}
+                                            <span class="che_acolor">{{v.shopNum}}</span>
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                {{if v.goods_info!= ""}}
+                                <div class=" che_display twoMan billing_product">
+                                    <span class="billing_pick" >详情:</span>
+                                    <div class="che_display pickName">
+                                        <span class="che_acolor ">{{v.goods_info}}</span>
+                                    </div>
+                                </div>
+                                {{/if}}
+                            </div>
+
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+                <!-- // 合计价格 -->
+                <div class="billing_main">
+                    <div class="billing_allNum tosuit_content che_display">
+                        <span>合计 :</span>
+                        <span class="billing_allPrice">￥{{data.totalprice}}</span>
+                    </div>
+                </div>
+                <div class="billing_main shitfuck che_display">
+                    <span class="shitBei">备注</span>
+                    <textarea name="" id="textarea" cols="30" rows="10" disabled="disabled">{{data.remarks}}</textarea>
+                </div>
+            </div>
+            <div class="reception_coupon validate_All">
+                <div class="list_coupon">验车单</div>
+                <div class="validate che_display " id="fristVal">
+                    <span>检查结果:</span>
+                    <div class="validate_father che_display">
+                        <span class="dispose val_red"></span>
+                        <span> 建议检查</span>
+                    </div>
+                    <div class="validate_father che_display">
+                        <span class="dispose val_yellow"></span>
+                        <span>留意观察</span>
+                    </div>
+                    <div class="validate_father che_display">
+                        <span class="dispose val_green"></span>
+                        <span>未见异常</span>
+                    </div>
+                </div>
+                {{each data.verify as v i}}
+                    <div class="validate" data-id={{v.goods_id}} data-temp={{v.example_id}}>
+                        <div class="che_display validate_father once">
+                            <div class="che_display">
+                                <span class="show_dots">检查项目:</span>
+                                <span class="show_dots val_name">{{v.goods_name}}</span>
+                            </div>
+                            <div class="che_display">
+                                <span>检查结果:</span>
+                                <div class="val_result che_display">
+                                    {{if v.grade==1}}
+                                    <span class=" red val_red select" data-id="1"></span>
+                                    <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                                    <span class="val_bgc green val_green" data-id="3"></span>
+                                    
+                                    {{else if v.grade==2}}
+                                    <span class="val_bgc red val_red" data-id="1"></span>
+                                    <span class=" yellow val_yellow select" data-id="2"></span>
+                                    <span class="val_bgc green val_green" data-id="3"></span>
+                                    {{else if v.grade==3}}
+                                    <span class="val_bgc red val_red" data-id="1"></span>
+                                    <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                                    <span class=" green val_green select" data-id="3"></span>
+                                    {{/if}}
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="che_display validate_father second" >
+                            <div class=" che_display">
+                                <span>上次结果:</span>
+                                {{if v.last_grade==1}}
+                                <span class="val_red dispose"></span>
+                                {{else if v.last_grade == 2}}
+                                <span class="val_yellow dispose"></span>
+                                {{else if v.last_grade == 3}}
+                                <span class="val_green dispose"></span>
+        
+                                {{/if}}                    
+                            </div>
+                            <div class="che_display">
+                                <span>上次操作:</span>
+                                {{if v.last_is_dispose=="未处理"}}
+                                <span class="che_color">{{v.last_is_dispose}}</span>
+                                {{else}}
+                                <span>{{v.last_is_dispose}}</span>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class=" validate_father thirdly">
+                            <div class="che_display">
+                                <span>处理方法:</span>
+                                <textarea id="textarea" cols="30" rows="10" disabled="disabled">{{v.dispose_way}}</textarea>
+                            </div>
+                            <div class="che_display">
+                                <span>备注:</span>
+                                <textarea id="remark" cols="30" rows="10" disabled="disabled">{{v.remark}}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+                <div class="validate_amend che_display">
+                    <span>修改验车单</span>
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+
+            </div>
+            <div class="billing_footer" >
+                <div class="addCommod" data-id="{{data.id}}">完成</div>
+            </div>
+        </div>
+    </div>
+
+</script>
+<script type="text/html" id="validate">
+    <div class="reception_coupon validate_All">
+        <div class="list_coupon">验车单</div>
+        <div class="validate che_display " id="fristVal">
+            <span>检查结果:</span>
+            <div class="validate_father che_display">
+                <span class="dispose val_red"></span>
+                <span> 建议检查</span>
+            </div>
+            <div class="validate_father che_display">
+                <span class="dispose val_yellow"></span>
+                <span>留意观察</span>
+            </div>
+            <div class="validate_father che_display">
+                <span class="dispose val_green"></span>
+                <span>未见异常</span>
+            </div>
+        </div>
+        {{each data as v i}}
+            <div class="validate" data-id={{v.goods_id}} data-temp={{v.example_id}}>
+                <div class="che_display validate_father once">
+                    <div class="che_display">
+                        <span class="show_dots">检查项目:</span>
+                        <span class="show_dots val_name">{{v.goods_name}}</span>
+                    </div>
+                    <div class="che_display">
+                        <span>检查结果:</span>
+                        <div class="val_result che_display">
+                            <span class="val_bgc red val_red" data-id="1"></span>
+                            <span class="val_bgc yellow val_yellow" data-id="2"></span>
+                            <span class="val_bgc green val_green" data-id="3"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="che_display validate_father second" >
+                    <div class=" che_display">
+                        <span>上次结果:</span>
+                        {{if v.last_grade==1}}
+                        <span class="val_red dispose"></span>
+                        {{else if v.last_grade == 2}}
+                        <span class="val_yellow dispose"></span>
+                        {{else if v.last_grade == 3}}
+                        <span class="val_green dispose"></span>
+
+                        {{/if}}                    
+                    </div>
+                    <div class="che_display">
+                        <span>上次操作:</span>
+                        {{if v.last_is_dispose=="未处理"}}
+                        <span class="che_color">{{v.last_is_dispose}}</span>
+                        {{else}}
+                        <span>{{v.last_is_dispose}}</span>
+                        {{/if}}
+                    </div>
+                </div>
+                <div class=" validate_father thirdly">
+                    <div class="che_display">
+                        <span>处理方法:</span>
+                        <textarea id="textarea" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="che_display">
+                        <span>备注:</span>
+                        <textarea id="remark" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</script>
+</html>

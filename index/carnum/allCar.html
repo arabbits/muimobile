@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index/billingover.css">
+    <style>
+        .over{
+            padding: 0 .25rem;
+            background-color: #ea5504;
+            height: 1.25rem;
+            line-height: 1.25rem;
+            border-radius: .25rem;
+            color: #ffffff;
+        }
+        .tosuit_top{
+            box-shadow: 0px 0px 10px 2px #f1f0f3;
+        }
+    </style>
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="../../index.html">
+                <span class=" mui-icon mui-icon-back"></span>
+            </a>
+            <h4>到店车辆</h4>
+        </div>
+        <div class="loading hiden" style="display: none;">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        <div class="volist hiden">
+            <div class="volist_nomode">
+                <div class="volist_bgimg che_display">
+                    <div class="backImg"></div>
+                    <div>空空如也</div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+                    <div class="tosuit_main">
+                        <!-- <div class="tosuit_top">
+                            <div class="tosuit_content che_display">
+                                <div class="sons" style="font-weight: 600">
+                                        <span class="tosuit_pai">车牌:</span>
+                                        <span>&nbsp;沪1231232</span>
+                                </div>
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <div class="sons">
+                                    <span class="tosuit_pai">车主:</span>
+                                    <span>&nbsp;大头</span>
+                                </div>
+                                <div class="sons">
+                                    <span class="tosuit_pai">电话:</span>
+                                    <span>&nbsp;13262857937</span>
+                                </div>
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <div class="sons">
+                                        <span class="tosuit_pai">到店日期:</span>
+                                        <span>&nbsp;2018-07-26</span>
+                                </div>
+                            </div>
+                            
+                        </div> -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../lib/js/mui.min.js"></script>
+<script src="../../lib/zepto/zepto.min.js"></script>
+<script src="../../js/rem.js"></script>
+<script src="../../lib/js/template.js"></script>
+<script src="../../js/common.js"></script>
+ <script src="../../js/index/allCar.js"></script>
+<script type="text/html" id="tpls">
+    {{each data as v i}}
+    
+        <div class="tosuit_top" data-id={{v.cmodel_id}}>
+            <div class="tosuit_content che_display">
+                <div class="sons" style="font-weight: 600">
+                        <span class="tosuit_pai">车牌:</span>
+                        <span>&nbsp;{{v.cart_licens}}</span>
+                </div>
+            </div>
+            <div class="tosuit_content che_display">
+                <div class="sons">
+                    <span class="tosuit_pai">车主:</span>
+                    <span>&nbsp;{{v.user_name}}</span>
+                </div>
+                <div class="sons">
+                    <span class="tosuit_pai">电话:</span>
+                    <span>&nbsp;{{v.phone}}</span>
+                </div>
+            </div>
+            <div class="tosuit_content che_display">
+                <div class="sons">
+                        <span class="tosuit_pai">到店日期:</span>
+                        <span>&nbsp;{{v.add_time}}</span>
+                </div>
+                <span class="mui-icon mui-icon-arrowright"></span>
+            </div>
+            
+        </div>
+
+    {{/each}}
+</script>
+</html>

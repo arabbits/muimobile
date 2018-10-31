@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../../lib/css/mui.indexedlist.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/message/brand.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container">
+        <header class="che_header mui-bar mui-bar-nav ">
+            <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left icon_left">
+                <!-- <span class="mui-action-back mui-icon mui-icon-left-nav "></span> -->
+            </a>
+            <h4 class="mui-title">选品牌</h4>
+        </header>
+        <div class="loading" style="display: none;">
+            <img src="../../img/loading.gif" alt="">
+        </div>
+        <div class="che_main" style="display: none">
+
+            <div class="mui-content">
+                <div id="list" class="mui-indexed-list mui-off-canvas-wrap mui-draggable mui-off-canvas-backdrop " style="height: 524px;">
+                    <div class="mui-inner-warp">
+                            <div class="mui-indexed-list-search mui-input-row mui-search" >
+                                    <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索机场" style="display: none">
+                                    <div class="timer_this" style="background-color: #fff;">
+                                            <span class="mui-icon mui-icon-location"></span>
+                                            <span class="shangHai">上海</span>
+                                            <span class="nowCity">当前定位城市</span>
+                                        </div>
+                                </div>
+                        <div class="mui-indexed-list-bar">
+                                <a>A</a>
+                                <a>B</a>
+                                <a>C</a>
+                                <a>D</a>
+                                <a>E</a>
+                                <a>F</a>
+                                <a>G</a>
+                                <a>H</a>
+                                <a>I</a>
+                                <a>J</a>
+                                <a>K</a>
+                                <a>L</a>
+                                <a>M</a>
+                                <a>N</a>
+                                <a>O</a>
+                                <a>P</a>
+                                <a>Q</a>
+                                <a>R</a>
+                                <a>S</a>
+                                <a>T</a>
+                                <a>U</a>
+                                <a>V</a>
+                                <a>W</a>
+                                <a>X</a>
+                                <a>Y</a>
+                                <a>Z</a>
+                            </div>
+                        <div class="mui-indexed-list-alert">D</div>
+                        <div class="mui-indexed-list-inner" style="height: 489px;">
+                            <ul class="mui-table-view" id="repl">
+                                <!-- 挖大坑 -->
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="mui-off-canvas-right mui-active shows" style="z-index: 400000;transform: translate3d(350px, 0px, 0px);">
+                        <div class="mui-scroll-wrapper" id="caidan1">
+                                <div class="mui-scroll" id="caidan2">
+                                    <ul id="aside">
+                                        <!-- <li class="asid_lis father"><a href="#">哈哈哈</a></li>
+                                        <li class="asid_lis " data-id="{{k.id}}"><a href="#">草拟吗</a></li> -->
+                                    </ul>
+                                </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="../../lib/js/mui.min.js"></script>
+    <script src="../../lib/js/mui.indexedlist.js"></script>
+    <script src="../../lib/js/template.js"></script>
+    <script src="../../lib/zepto/zepto.min.js"></script>
+    <script src="../../js/rem.js"></script>
+    <script src="../../js/message/brand.js"></script>
+
+    <script type="text/html" id="tpl">
+        {{ each data as v i }}
+        <li data-group="{{i}}" class="mui-table-view-divider mui-indexed-list-group">{{i}}</li>
+            {{each v as k val}}
+            <li data-id="{{k.id}}" data-typeId="2" class="mui-table-view-cell mui-indexed-list-item">{{k.name}}</li>
+            {{/each}}
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpltwo">
+        {{ each data as v i }}
+        <li class="asid_lis father"><a>{{v.name}}</a></li>
+            {{each v.list as k val}}
+            <li class="asid_lis asideClick" data-id="{{k.id}}"><a>{{k.name}}</a></li>
+            {{/each}}
+         {{/each}}
+    </script>
+</body>
+
+</html>

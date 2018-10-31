@@ -1,0 +1,211 @@
+.che_container {
+  padding-bottom: 5rem;
+}
+.che_container .che_main .mui-scroll {
+  font-size: .7rem;
+}
+.che_container .che_main .mui-scroll .reception_header {
+  height: 3.6rem;
+  background-color: #fff;
+  border-top: 1px solid #f5f5f5;
+  padding: 0 .75rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_img {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .6rem;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 70%;
+}
+.che_container .che_main .mui-scroll .reception_header .rechead_main > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.che_container .che_main .mui-scroll .reception_nav {
+  padding-left: .7rem;
+  background-color: #fff;
+  letter-spacing: 1px;
+  margin-top: .5rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top {
+  height: 2.1rem;
+  padding-right: .7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex {
+  justify-content: space-between;
+  width: 6.8rem;
+  color: #a0a0a0;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .select_man {
+  padding-right: .1rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .recnav_sex .iconfont {
+  font-size: .75rem;
+}
+.che_container .che_main .mui-scroll .reception_nav .recenav_top .nav_iphone {
+  letter-spacing: 0px;
+}
+.che_container .che_main .mui-scroll .reception_nav :last-child {
+  border: none;
+}
+.che_container .che_main .mui-scroll .reception_coupon .list_coupon {
+  text-align: center;
+  background-color: #fff;
+  margin-top: .5rem;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  padding-right: .7rem;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList {
+  padding-left: .7rem;
+  background-color: #fff;
+  letter-spacing: 1px;
+}
+.che_container .che_main .mui-scroll .reception_coupon .couponList .recenav_top > div {
+  height: 2.1rem;
+  padding-right: .7rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f5f5f5;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate {
+  border-top: 1px solid #f5f5f5;
+  padding: .5rem .7rem;
+  background-color: #f5f5f5;
+  align-items: center;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father {
+  justify-content: space-between;
+  padding: .25rem 0;
+  margin-right: .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father > div {
+  width: 50%;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father > div .val_name {
+  width: 5.5rem;
+  display: inline-block;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father > div .val_result > span {
+  width: 1.1rem;
+  height: 1rem;
+  margin: 0 .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father > div .che_color {
+  padding-left: .2rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .dispose {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1rem;
+  margin: 0 .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .red {
+  border: 1px solid #dc0909;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .val_red {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #dc0909;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .yellow {
+  border: 1px solid #f5be02;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .val_yellow {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #f5be02;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .green {
+  border: 1px solid #179007;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .val_green {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  background-color: #179007;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .validate_father .val_bgc {
+  background-color: transparent;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .thirdly > div {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .25rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .thirdly > div > span {
+  width: 3.1rem;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate .thirdly > div > textarea {
+  padding: .2rem 0;
+  font-size: .7rem;
+  width: 13.5rem;
+  height: 1.4rem;
+  margin: 0;
+}
+.che_container .che_main .mui-scroll .reception_coupon .validate:nth-child(2n) {
+  background-color: #fff;
+}
+.che_container .che_main .mui-scroll .reception_main {
+  margin-top: .5rem;
+  background-color: #fff;
+}
+.che_container .che_main .mui-scroll .reception_main .recemain_title {
+  height: 2.1rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: #ea5504;
+  letter-spacing: 1px;
+}
+.che_container .che_main .mui-scroll .reception_main .recemain_main .recemain_one {
+  padding: 0 .7rem;
+  border-top: 1px solid #f5f5f5;
+  height: 3.6rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.che_container .che_main .mui-scroll .reception_main .recemain_main .recemain_one > div {
+  height: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+.che_container .che_main .mui-scroll .reception_main .recemain_main .recemain_one .recemain_sons {
+  color: #a0a0a0;
+}
+.che_container .che_footer {
+  height: 5rem;
+}
+.che_container .reception_footer {
+  padding: .4rem;
+  padding-bottom: 0px;
+}
+.che_container .reception_footer .reception_message {
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: .25rem;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  background-color: #ea5504;
+  background: -webkit-linear-gradient(left, #ff8417, #ea5504);
+  background: linear-gradient(left, #ff8417, #ea5504);
+}
+.che_container .over_footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.che_container .over_footer > div {
+  width: 50%;
+}

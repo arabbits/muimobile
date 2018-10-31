@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/billingover.css">
+    <style>
+        .over{
+            padding: 0 5px;
+            background-color: #ea5504;
+            height: 25px;
+            line-height: 25px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+    </style>
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="../index.html">
+                <span class="mui-icon mui-icon-back"></span>
+            </a>
+            <h4>收款</h4>
+        </div>
+        <div class="loading hiden" style="display: none;">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="volist hiden">
+            <div class="volist_nomode">
+                <div class="volist_bgimg che_display">
+                    <div class="backImg"></div>
+                    <div>空空如也</div>
+                </div>
+            </div>
+        </div>
+        <div class="che_main hiden">
+            <div class="mui-scroll-wrapper">
+                <!--子盒子-->
+                <div class="mui-scroll">
+
+                    <div class="tosuit_main">
+                        <div class="tosuit_top">
+                            <div class="tosuit_content che_display">
+                                <div class="sons">
+                                        <span class="tosuit_pai">订单号:</span>
+                                        <span>123123123213</span>
+                                </div>
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <div class="sons">
+                                    <span class="tosuit_pai">车主:</span>
+                                    <span>大头</span>
+                                </div>
+                                <div class="sons">
+                                    <span class="tosuit_pai">车牌:</span>
+                                    <span>沪1231232</span>
+                                </div>
+                            </div>
+                            <div class="tosuit_content che_display">
+                                <div class="sons">
+                                        <span class="tosuit_pai">下单日期:</span>
+                                        <span>2018-07-26</span>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/pay.js"></script>
+<script type="text/html" id="tpls">
+    {{each data as v i}}
+    <div class="tosuit_top" data-id="{{v.id}}">
+        <div class="tosuit_content che_display">
+            <div class="sons">
+                    <span class="tosuit_pai">订单号:</span>
+                    <span>{{v.ordersn}}</span>
+            </div>
+        </div>
+        <div class="tosuit_content che_display">
+            <div class="sons">
+                <span class="tosuit_pai">车主:</span>
+                <span class="fuckYou show_dots">{{v.connect_people}}</span>
+            </div>
+            <div class="sons">
+                <span class="tosuit_pai">车牌:</span>
+                <span>{{v.cartList.cart_licens}}</span>
+            </div>
+        </div>
+        <div class="tosuit_content che_display">
+            <div class="sons">
+                    <span class="tosuit_pai">下单日期:</span>
+                    <span>{{v.add_time}}</span>
+            </div>
+            {{if v.status>=4 && v.s_status==1 && v.order_type!=11}}
+            <span class="over"  style="background-color:#ccc">已结算</span>
+            
+            {{else if v.status == 1 && v.s_status==1 && v.order_type!=11}}
+            <span class="over shit">结算</span>
+            
+            {{/if}}            
+        </div>
+        
+    </div>
+
+    {{/each}}
+</script>
+</html>

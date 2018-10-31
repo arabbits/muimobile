@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <meta http-equiv="refresh" content="20"> -->
+    <link rel="stylesheet" href="../lib/css/mui.min.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index/couponList.css">
+    <title>车吧族</title>
+</head>
+
+<body>
+    <div class="che_container che_newcont">
+        <div class="che_header mui-clearfix">
+            <a class="icon_left" href="./reception.html">
+                <span class="mui-action-back mui-icon mui-icon-back"></span>
+            </a>
+            <h4>卡券列表</h4>
+            <a class="icon_right" href="/index.html">
+                <span class="iconfont icon-shouye"></span>
+            </a>
+        </div>
+        <div class="loading hiden" style="display: none;">
+                <img src="../img/loading.gif" alt="">
+            </div>
+        <div class="loading hiden">
+            <img src="../img/loading.gif" alt="">
+        </div>
+        <div class="che_main">
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                        <div class="reception_navs">
+                        </div>
+                        <div class="reception_coupon">
+                                <div class="list_coupon">卡券列表</div>
+                                <div class="couponList">
+                                    <div class="recenav_top">
+                                        <div class="che_display couponName">
+                                            <span class="namePro">卡券名称</span>
+                                            <span class="">服务次数</span>
+                                            <span class="carMan">有效期</span>
+                                            <span class="">数量</span>
+                                            <span class="">勾选</span>
+                                            
+                                        </div>
+                                        <div class="coupon_main">
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                        </div>
+                        <div class="reception_footer kouka hiden" >
+                            <div class="reception_message">
+                                确认扣卡
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../lib/js/mui.min.js"></script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../js/rem.js"></script>
+<script src="../lib/js/template.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/index/couponList.js"></script>
+<script type="text/html" id="tpl">
+    <div class="reception_header che_display">
+        <div class="rechead_img">
+            <img src="{{data.userInfo.avatar}}" alt="">
+        </div>
+        <div class="rechead_main che_display">
+            <span class="carName">{{data.cartInfo.cart_licens}}</span>
+            <span>{{data.cartInfo.type_name}}</span>
+        </div>
+    </div>
+    <div class="reception_nav">
+        <div class="recenav_top che_display">
+            <span>客户</span>
+            <span class="carMan">{{data.userInfo.user_name}}</span>
+        </div>
+        <div class="recenav_top che_display">
+            <span>手机</span>
+            <span class="nav_iphone">{{data.userInfo.phone}}</span>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="tplLingshi">
+    {{each shit as v i}}
+        <tr>
+            <td>{{v.shopNum}}</td>
+            <td>{{v.goods_name}}</td>
+            <td>{{v.real_price}}</td>
+            <td>{{v.goods_info}}</td>
+            <td class="del"><button>删除</button></td>
+        </tr>
+    {{/each}}
+</script>
+<script type="text/html" id="tplEntity">
+    {{each shit as v i}}
+    <tr data-id="{{v.goods_id}}">
+        <td>{{v.type_num}}</td>
+        <td>{{v.goods_name}}</td>
+        <td>{{v.brand}}</td>
+        <td>{{v.model}}</td>
+        <td>{{v.orderprice}}</td>
+        <td class="del"><button>删除</button></td>
+    </tr>
+    <tr>
+        <td colspan="6">
+            <form class="forms" data-id={{v.goods_id}}>
+                    <div class="coupon_oneStyle che_display" data-id="4">
+                        <div class="oneStyle che_display">
+                            <span>接单人</span>
+                            <!-- <span class="addCoupon">添加</span> -->
+                        </div>
+                        <div class="father">
+                            <div class="commodity_addman" data-id="1">
+                                <!-- <span class="iconfont icon-guanbi"></span> -->
+                                <select name="" id="select" data-id="1" disabled="disabled">
+                                        <option value="233">选择</option>
+                                </select>
+                                <span class="iconfont icon-xuanze- shits"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon_oneStyle che_display" data-id="5">
+                        <div class="oneStyle che_display">
+                            <span>领料人</span>
+                            <span class="addCoupon">添加</span>
+                        </div>
+                        <div class="father">
+                            <div class="commodity_addman" data-id="1">
+                                <!-- <span class="iconfont icon-guanbi"></span> -->
+                                <select name="" id="select">
+                                        <option value="233">傻屌</option>
+                                </select>
+                                <span class="iconfont icon-xuanze- shits"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon_oneStyle che_display" data-id="6">
+                        <div class="oneStyle che_display">
+                            <span>施工人</span>
+                            <span class="addCoupon">添加</span>
+                        </div>
+                        <div class="father">
+                            <div class="commodity_addman" data-id="1">
+                                <!-- <span class="iconfont icon-guanbi"></span> -->
+                                <select name="" id="select">
+                                        <option value="233">傻屌</option>
+                                </select>
+                                <span class="iconfont icon-xuanze- shits"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+            </form>
+        </td>
+    </tr>
+    {{/each}}
+</script>
+
+<script type="text/html" id="tplcoupon">
+    {{if data[0].cardList.length ==0}}
+    <div class="list_coupon che_color">暂无卡券</div>
+    {{else}}
+    {{each data[0].cardList as v i}}
+    <div class="coupon_one" data-id="{{v.coupons_id}}" data-lirun="{{v.card_profit_price}}">
+        <div class="couponName che_display spance" data-id="{{v.card_id}}">
+            <span class="namePro show_dots">{{v.card_name}}</span>
+            <span>{{v.card_num}}</span>
+            <span>{{v.validity_time}}</span>
+            <span> <input type="text" class="shuru" readonly></span>
+            <span class="iconfont icon-xuanze- allpitch"></span>
+            <!-- <input type="checkbox"> -->
+        </div>
+        <div class="grandfather hiden">
+            <!-- 接单人 -->
+            <div class="coupon_oneStyle che_display" data-id="1">
+                <div class="oneStyle che_display">
+                    <span>接单人</span>
+                    <!-- <span class="addCoupon">添加</span> -->
+                </div>
+                <div class="father">
+                    <div class="commodity_addman" data-id="1">
+                        <!-- <span class="iconfont icon-guanbi"></span> -->
+                        <select name="" id="select" data-id="1" disabled="disabled">
+                                <option value="233">选择</option>
+                        </select>
+                        <span class="iconfont icon-xuanze- shits"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="coupon_oneStyle che_display" data-id="2">
+                <div class="oneStyle che_display">
+                    <span>领料人</span>
+                    <span class="addCoupon">添加</span>
+                </div>
+                <div class="father">
+                    <div class="commodity_addman" data-id="1">
+                        <!-- <span class="iconfont icon-guanbi"></span> -->
+                        <select name="" id="select">
+                                <option value="233">傻屌</option>
+                        </select>
+                        <span class="iconfont icon-xuanze- shits"></span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="coupon_oneStyle che_display" data-id="3">
+                <div class="oneStyle che_display">
+                    <span>施工人</span>
+                    <span class="addCoupon">添加</span>
+                </div>
+                <div class="father">
+                    <div class="commodity_addman" data-id="1">
+                        <!-- <span class="iconfont icon-guanbi"></span> -->
+                        <select name="" id="select">
+                                <option value="233">傻屌</option>
+                        </select>
+                        <span class="iconfont icon-xuanze- shits"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- 店铺按钮 -->
+            <div class="coupon_btn che_display">
+                <div class="temporary">临时商品</div>
+                <div class="entity">店内商品</div>
+            </div>
+            <table border="1" width="100%" class="">
+                <thead>
+                    <tr>
+                        <th>数量</th>
+                        <th>店内商品</th>
+                        <th>品牌</th>
+                        <th>型号</th>
+                        <th>价格</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="couponEntity">
+                    <!-- 坑 -->
+                </tbody>
+            </table>
+            <table border="1" width="100%" class="">
+                <thead>
+                    <tr>
+                        <th>数量</th>
+                        <th>临时商品</th>
+                        <th>价格</th>
+                        <th>详情</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody class="tableLinshi">
+                    <!-- 坑 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+
+</html>
